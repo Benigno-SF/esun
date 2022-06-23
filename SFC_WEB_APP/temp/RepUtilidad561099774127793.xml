@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="get">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IDCODIGOGENERAL" type="xs:string" minOccurs="0" />
+                <xs:element name="APENOM" type="xs:string" minOccurs="0" />
+                <xs:element name="DNI" type="xs:string" minOccurs="0" />
+                <xs:element name="INGRESO" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="CESE" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="IMPORTE_REPARTIR" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PERIODO" type="xs:string" minOccurs="0" />
+                <xs:element name="DIAS_TODOS" type="xs:int" minOccurs="0" />
+                <xs:element name="DIAS_TRABAJADOR" type="xs:int" minOccurs="0" />
+                <xs:element name="REMUNERACION_TODOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="REMUNERACION_TRABAJADOR" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DISTRIBUIR_DIAS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DISTRIBUIR_REMUNERACION" type="xs:decimal" minOccurs="0" />
+                <xs:element name="OTROS_INGRESOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="RENTA" type="xs:decimal" minOccurs="0" />
+                <xs:element name="UTILIDAD" type="xs:decimal" minOccurs="0" />
+                <xs:element name="UTILIDAD_NETA" type="xs:decimal" minOccurs="0" />
+                <xs:element name="IDTIPOPERSONAL" type="xs:string" minOccurs="0" />
+                <xs:element name="INGRESO_XDIA" type="xs:decimal" minOccurs="0" />
+                <xs:element name="INGRESO_XREMUNE" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO4" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO5" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO6" type="xs:decimal" minOccurs="0" />
+                <xs:element name="GRUPO_DSC" type="xs:string" minOccurs="0" />
+                <xs:element name="CCOSTO_DSC" type="xs:string" minOccurs="0" />
+                <xs:element name="CARGO_DSC" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <get>
+    <IDCODIGOGENERAL>74127793</IDCODIGOGENERAL>
+    <APENOM>ESPINOZA ANGLAS, ELMER ANGEL</APENOM>
+    <DNI>74127793</DNI>
+    <INGRESO>2018-08-22T00:00:00-05:00</INGRESO>
+    <IMPORTE_REPARTIR>220653.75</IMPORTE_REPARTIR>
+    <PERIODO>2020</PERIODO>
+    <DIAS_TODOS>258082</DIAS_TODOS>
+    <DIAS_TRABAJADOR>292</DIAS_TRABAJADOR>
+    <REMUNERACION_TODOS>23268154.25</REMUNERACION_TODOS>
+    <REMUNERACION_TRABAJADOR>26234.85</REMUNERACION_TRABAJADOR>
+    <DISTRIBUIR_DIAS>110326.88</DISTRIBUIR_DIAS>
+    <DISTRIBUIR_REMUNERACION>110326.88</DISTRIBUIR_REMUNERACION>
+    <OTROS_INGRESOS>0.00</OTROS_INGRESOS>
+    <DESCUENTOS>0.00</DESCUENTOS>
+    <RENTA>0.00</RENTA>
+    <UTILIDAD>249.22</UTILIDAD>
+    <UTILIDAD_NETA>249.22</UTILIDAD_NETA>
+    <IDTIPOPERSONAL>02</IDTIPOPERSONAL>
+    <INGRESO_XDIA>124.83</INGRESO_XDIA>
+    <INGRESO_XREMUNE>124.39</INGRESO_XREMUNE>
+    <DESCUENTO1>0.00</DESCUENTO1>
+    <DESCUENTO2>0.00</DESCUENTO2>
+    <DESCUENTO3>0.00</DESCUENTO3>
+    <DESCUENTO4>0.00</DESCUENTO4>
+    <DESCUENTO5>0.00</DESCUENTO5>
+    <DESCUENTO6>0.00</DESCUENTO6>
+    <GRUPO_DSC>SISTEMAS - TI</GRUPO_DSC>
+    <CCOSTO_DSC>AREA DE TI</CCOSTO_DSC>
+    <CARGO_DSC>COORDINADOR DE INFRAESTRUCTURA TI</CARGO_DSC>
+  </get>
+</NewDataSet>

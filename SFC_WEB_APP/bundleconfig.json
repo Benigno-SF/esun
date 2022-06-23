@@ -1,0 +1,200 @@
+[
+  {
+    "outputFileName": "Content/feather.min.css",
+    "inputFiles": [
+      "Content/feather.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/font-awesome.min.css",
+    "inputFiles": [
+      "Content/font-awesome.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/pace.min.css",
+    "inputFiles": [
+      "Content/pace.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/palette-gradient.min.css",
+    "inputFiles": [
+      "Content/palette-gradient.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/perfect-scrollbar.min.css",
+    "inputFiles": [
+      "Content/perfect-scrollbar.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/toastr.min.css",
+    "inputFiles": [
+      "Content/toastr.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/vertical-menu-modern.min.css",
+    "inputFiles": [
+      "Content/vertical-menu-modern.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/components.min.css",
+    "inputFiles": [
+      "Content/components.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/colors.min.css",
+    "inputFiles": [
+      "Content/colors.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/fa-all.min.css",
+    "inputFiles": [
+      "Content/fa-all.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/moment.min.js",
+    "inputFiles": [
+      "Scripts/moment.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app-menu.min.js",
+    "inputFiles": [
+      "Scripts/app-menu.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app.min.js",
+    "inputFiles": [
+      "Scripts/app.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/blockUI.min.js",
+    "inputFiles": [
+      "Scripts/blockUI.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap-datetimepicker.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap-datetimepicker.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap.bundle.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap.bundle.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables.min.js",
+    "inputFiles": [
+      "Scripts/datatables.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/hammer.min.js",
+    "inputFiles": [
+      "Scripts/hammer.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery-3.3.1.min.js",
+    "inputFiles": [
+      "Scripts/jquery-3.3.1.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery-3.3.1.slim.min.js",
+    "inputFiles": [
+      "Scripts/jquery-3.3.1.slim.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery-pers.min.js",
+    "inputFiles": [
+      "Scripts/jquery-pers.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery-sliding-menu.min.js",
+    "inputFiles": [
+      "Scripts/jquery-sliding-menu.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery.matchHeight.min.js",
+    "inputFiles": [
+      "Scripts/jquery.matchHeight.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/moment-with-locales.min.js",
+    "inputFiles": [
+      "Scripts/moment-with-locales.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/pace.min.js",
+    "inputFiles": [
+      "Scripts/pace.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/perfect-scrollbar.min.js",
+    "inputFiles": [
+      "Scripts/perfect-scrollbar.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/popper-utils.min.js",
+    "inputFiles": [
+      "Scripts/popper-utils.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/popper.min.js",
+    "inputFiles": [
+      "Scripts/popper.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/screenfull.min.js",
+    "inputFiles": [
+      "Scripts/screenfull.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sweetalert2.min.js",
+    "inputFiles": [
+      "Scripts/sweetalert2.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/toastr.min.js",
+    "inputFiles": [
+      "Scripts/toastr.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/unison.min.js",
+    "inputFiles": [
+      "Scripts/unison.js"
+    ]
+  }
+]

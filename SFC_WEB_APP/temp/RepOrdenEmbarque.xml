@@ -1,0 +1,413 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="get">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdOrdenEmbarque" type="xs:int" minOccurs="0" />
+                <xs:element name="cCShipper" type="xs:string" minOccurs="0" />
+                <xs:element name="cCCliente" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescCampana" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescDestino" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescTipoTranporte" type="xs:string" minOccurs="0" />
+                <xs:element name="dFechaEmbarque" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescFlete" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescEmisionBL" type="xs:string" minOccurs="0" />
+                <xs:element name="cDesCultivo" type="xs:string" minOccurs="0" />
+                <xs:element name="nCajas" type="xs:decimal" minOccurs="0" />
+                <xs:element name="nPesoNeto" type="xs:decimal" minOccurs="0" />
+                <xs:element name="nPesoBrutoAprox" type="xs:decimal" minOccurs="0" />
+                <xs:element name="bCertOrigen" type="xs:boolean" minOccurs="0" />
+                <xs:element name="bCertFrio" type="xs:boolean" minOccurs="0" />
+                <xs:element name="bCertFitosanitario" type="xs:boolean" minOccurs="0" />
+                <xs:element name="bAPPlanta" type="xs:boolean" minOccurs="0" />
+                <xs:element name="bAcogeDrawback" type="xs:boolean" minOccurs="0" />
+                <xs:element name="cTemperatura" type="xs:string" minOccurs="0" />
+                <xs:element name="cHumedad" type="xs:string" minOccurs="0" />
+                <xs:element name="cVentilacion" type="xs:string" minOccurs="0" />
+                <xs:element name="cAtmosferaControlada" type="xs:string" minOccurs="0" />
+                <xs:element name="nIdOrdenEmbarqueConsolidado" type="xs:int" minOccurs="0" />
+                <xs:element name="cDescLugarSalida" type="xs:string" minOccurs="0" />
+                <xs:element name="dFechaSalida" type="xs:string" minOccurs="0" />
+                <xs:element name="dHoraSalida" type="xs:string" minOccurs="0" />
+                <xs:element name="dFIngresoAlmacen" type="xs:string" minOccurs="0" />
+                <xs:element name="dETD" type="xs:string" minOccurs="0" />
+                <xs:element name="dETA" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescNavio" type="xs:string" minOccurs="0" />
+                <xs:element name="cCodeVapor" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescCIANaviera" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescLineaNaviera" type="xs:string" minOccurs="0" />
+                <xs:element name="cContainer" type="xs:string" minOccurs="0" />
+                <xs:element name="cSVC" type="xs:string" minOccurs="0" />
+                <xs:element name="realizadox" type="xs:string" minOccurs="0" />
+                <xs:element name="dFechaCrea" type="xs:string" minOccurs="0" />
+                <xs:element name="cPartidaArancelaria" type="xs:string" minOccurs="0" />
+                <xs:element name="cajas" type="xs:int" minOccurs="0" />
+                <xs:element name="cUsuarioCrea" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IdShipper" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Movil" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="NombrePais" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoPais" type="xs:string" minOccurs="0" />
+                <xs:element name="Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Poblacion" type="xs:string" minOccurs="0" />
+                <xs:element name="Img" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdOpLogistico" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Movil" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="NombrePais" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoPais" type="xs:string" minOccurs="0" />
+                <xs:element name="Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Poblacion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IdCliente" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Movil" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="NombrePais" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoPais" type="xs:string" minOccurs="0" />
+                <xs:element name="Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Poblacion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get4">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IdConsignee" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Movil" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="NombrePais" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoPais" type="xs:string" minOccurs="0" />
+                <xs:element name="Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Poblacion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get5">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IdNotify" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Movil" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="NombrePais" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoPais" type="xs:string" minOccurs="0" />
+                <xs:element name="Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Poblacion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get6">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IdNotify2" type="xs:int" minOccurs="0" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="RUC" type="xs:string" minOccurs="0" />
+                <xs:element name="Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Movil" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="NombrePais" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoPais" type="xs:string" minOccurs="0" />
+                <xs:element name="Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Poblacion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get7">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdEmpresa" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdPlanta" type="xs:int" minOccurs="0" />
+                <xs:element name="cDescPlanta" type="xs:string" minOccurs="0" />
+                <xs:element name="cDireccion" type="xs:string" minOccurs="0" />
+                <xs:element name="cContacto" type="xs:string" minOccurs="0" />
+                <xs:element name="cContactoMovil" type="xs:string" minOccurs="0" />
+                <xs:element name="cNota" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get8">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="cDesCultivo" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescVariedad" type="xs:string" minOccurs="0" />
+                <xs:element name="cDesEmbalaje" type="xs:string" minOccurs="0" />
+                <xs:element name="nkilos" type="xs:decimal" minOccurs="0" />
+                <xs:element name="nCajas" type="xs:int" minOccurs="0" />
+                <xs:element name="bPorConfirmar" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get9">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdEmpresa" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdOrdenEmbarque" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdObservacionOE" type="xs:int" minOccurs="0" />
+                <xs:element name="cDescObservacion" type="xs:string" minOccurs="0" />
+                <xs:element name="cUsuarioCrea" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get10">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdConsolidado" type="xs:int" minOccurs="0" />
+                <xs:element name="cCodeConsolidado" type="xs:string" minOccurs="0" />
+                <xs:element name="cCShipper" type="xs:string" minOccurs="0" />
+                <xs:element name="cCCliente" type="xs:string" minOccurs="0" />
+                <xs:element name="dFechaEmbarque" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get11">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ConCliente" type="xs:int" minOccurs="0" />
+                <xs:element name="NombreCompleto" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefonofijo" type="xs:string" minOccurs="0" />
+                <xs:element name="TelefonoMovil" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get12">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ConConsignee" type="xs:int" minOccurs="0" />
+                <xs:element name="NombreCompleto" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefonofijo" type="xs:string" minOccurs="0" />
+                <xs:element name="TelefonoMovil" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get13">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ConNotify" type="xs:int" minOccurs="0" />
+                <xs:element name="NombreCompleto" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefonofijo" type="xs:string" minOccurs="0" />
+                <xs:element name="TelefonoMovil" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get14">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ConNotify2" type="xs:int" minOccurs="0" />
+                <xs:element name="NombreCompleto" type="xs:string" minOccurs="0" />
+                <xs:element name="Telefonofijo" type="xs:string" minOccurs="0" />
+                <xs:element name="TelefonoMovil" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Fax" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <get>
+    <nIdOrdenEmbarque>788</nIdOrdenEmbarque>
+    <cDescCampana>CAMPAÑA CITRICO 2021</cDescCampana>
+    <cDescDestino>PHILADELPHIA-USA</cDescDestino>
+    <cDescTipoTranporte>MARITIMO</cDescTipoTranporte>
+    <dFechaEmbarque>07/07/2021</dFechaEmbarque>
+    <cDescFlete>COLLECT</cDescFlete>
+    <cDescEmisionBL>EXPRESS</cDescEmisionBL>
+    <cDesCultivo>PALTA</cDesCultivo>
+    <nCajas>2200.00</nCajas>
+    <nPesoNeto>22000.00</nPesoNeto>
+    <nPesoBrutoAprox>24500.00</nPesoBrutoAprox>
+    <bCertOrigen>true</bCertOrigen>
+    <bCertFrio>true</bCertFrio>
+    <bCertFitosanitario>true</bCertFitosanitario>
+    <bAPPlanta>false</bAPPlanta>
+    <bAcogeDrawback>true</bAcogeDrawback>
+    <cTemperatura>0</cTemperatura>
+    <cHumedad />
+    <cVentilacion>15CBM</cVentilacion>
+    <cAtmosferaControlada />
+    <nIdOrdenEmbarqueConsolidado>0</nIdOrdenEmbarqueConsolidado>
+    <cDescLugarSalida>Lima - Callao</cDescLugarSalida>
+    <dFechaSalida>07/07/2021</dFechaSalida>
+    <dHoraSalida>19:17:00</dHoraSalida>
+    <dFIngresoAlmacen>07/07/2021</dFIngresoAlmacen>
+    <dETD>07/07/2021</dETD>
+    <dETA>20/07/2021</dETA>
+    <cDescNavio>CMA CGM OHIO</cDescNavio>
+    <cCodeVapor>1221N</cCodeVapor>
+    <cDescCIANaviera>NAVIERA</cDescCIANaviera>
+    <cDescLineaNaviera>HAPAG</cDescLineaNaviera>
+    <cContainer />
+    <cSVC />
+    <realizadox>KATERINE CRISTY LOPEZ OBREGON</realizadox>
+    <dFechaCrea>06/07/2021</dFechaCrea>
+    <cPartidaArancelaria>80440000 | </cPartidaArancelaria>
+    <cajas>2200</cajas>
+    <cUsuarioCrea>KLOPEZ</cUsuarioCrea>
+  </get>
+  <get1>
+    <IdShipper>392</IdShipper>
+    <Nombre>AGROINDUSTRIA CAMPO VERDE S.A.C.</Nombre>
+    <RUC>20502072006</RUC>
+    <Direccion>CAL. CONTRALMIRANTE MONTERO NRO. 411 DPTO. 404- URB. CAMPO DE POLO - MAGDALENA DEL MAR LIMA - PERU    </Direccion>
+    <Movil />
+    <Telefono />
+    <Email>iherrera@nutreina.com; bsotelo@agricoladonluis.com; asistente.logistica@agricoladonluis.com</Email>
+    <Fax />
+    <NombrePais>PERU</NombrePais>
+    <CodigoPais>PE</CodigoPais>
+    <Provincia />
+    <Poblacion />
+    <Img>392.png</Img>
+  </get1>
+  <get2>
+    <nIdOpLogistico>1512</nIdOpLogistico>
+    <Nombre>APM TERMINALS INLAND SERVICES S.A</Nombre>
+    <RUC>20107012011</RUC>
+    <Direccion> NESTOR GAMBETTA KM. 14.5    </Direccion>
+    <Movil />
+    <Telefono />
+    <Email />
+    <Fax />
+    <NombrePais>PERU</NombrePais>
+    <CodigoPais>PE</CodigoPais>
+    <Provincia>PROV. CONSTITUCIONAL DEL CALLAO </Provincia>
+    <Poblacion>CALLAO </Poblacion>
+  </get2>
+  <get3>
+    <IdCliente>667</IdCliente>
+    <Nombre>JAC VANDENBERG INC</Nombre>
+    <RUC>120</RUC>
+    <Direccion>120 WHITE PLAINS RD. STE 510. TARRY TOWN NY 10591    </Direccion>
+    <Movil />
+    <Telefono>1 914 964 5900</Telefono>
+    <Email>documents@jacvandenberg.com</Email>
+    <Fax>1 914 964 5901</Fax>
+    <NombrePais>ESTADOS UNIDOS</NombrePais>
+    <CodigoPais>US</CodigoPais>
+    <Provincia />
+    <Poblacion />
+  </get3>
+  <get4>
+    <IdConsignee>667</IdConsignee>
+    <Nombre>JAC VANDENBERG INC</Nombre>
+    <RUC>120</RUC>
+    <Direccion>120 WHITE PLAINS RD. STE 510. TARRY TOWN NY 10591    </Direccion>
+    <Movil />
+    <Telefono>1 914 964 5900</Telefono>
+    <Email>documents@jacvandenberg.com</Email>
+    <Fax>1 914 964 5901</Fax>
+    <NombrePais>ESTADOS UNIDOS</NombrePais>
+    <CodigoPais>US</CodigoPais>
+    <Provincia />
+    <Poblacion />
+  </get4>
+  <get5>
+    <IdNotify>658</IdNotify>
+    <Nombre>J&amp;K Fresh East  </Nombre>
+    <RUC>721</RUC>
+    <Direccion>A Division of 721 Logistics LLC 399 Market Street, Suite 220 Philadelphia, PA  19106 USA      </Direccion>
+    <Movil />
+    <Telefono>610-994-5060</Telefono>
+    <Email>docs@jkfresheast.com;bfagan@jkfresheast.com</Email>
+    <Fax>610-362-1201</Fax>
+    <NombrePais>ESTADOS UNIDOS</NombrePais>
+    <CodigoPais>US</CodigoPais>
+    <Provincia />
+    <Poblacion />
+  </get5>
+  <get7>
+    <nIdEmpresa>1</nIdEmpresa>
+    <nIdPlanta>1</nIdPlanta>
+    <cDescPlanta>SUN FRUITS EXPORTS S.A.</cDescPlanta>
+    <cDireccion>CASERIO EL LIMON S/N - SAN JUAN BAUTISTA</cDireccion>
+    <cContacto>ING. WALDO RUZ</cContacto>
+    <cContactoMovil>992792765</cContactoMovil>
+    <cNota>Detallar la posicion de los 2 termografos en el contenedor Elaborar mapa de estiba adjunto</cNota>
+  </get7>
+  <get8>
+    <cDesCultivo>PALTA</cDesCultivo>
+    <cDescVariedad>HASS</cDescVariedad>
+    <cDesEmbalaje>Caja Plastica</cDesEmbalaje>
+    <nkilos>10.00</nkilos>
+    <nCajas>2200</nCajas>
+    <bPorConfirmar>false</bPorConfirmar>
+  </get8>
+  <get11>
+    <ConCliente>34</ConCliente>
+    <NombreCompleto>GREG VANDENBERG</NombreCompleto>
+    <Telefonofijo />
+    <TelefonoMovil />
+    <Email />
+    <Fax />
+  </get11>
+  <get12>
+    <ConConsignee>34</ConConsignee>
+    <NombreCompleto>GREG VANDENBERG</NombreCompleto>
+    <Telefonofijo />
+    <TelefonoMovil />
+    <Email />
+    <Fax />
+  </get12>
+  <get13>
+    <ConNotify>32</ConNotify>
+    <NombreCompleto>Bill Fagan</NombreCompleto>
+    <Telefonofijo />
+    <TelefonoMovil />
+    <Email />
+    <Fax />
+  </get13>
+</NewDataSet>

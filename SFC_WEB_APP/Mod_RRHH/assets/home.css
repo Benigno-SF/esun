@@ -1,0 +1,25 @@
+#homepage .jumbo{
+    /*background-image: url(l.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height:100%;
+         background: #0065b3; */
+    background: -webkit-radial-gradient(bottom,#0096D6 12%,#7f848c);
+    background: radial-gradient(at bottom,#bacad0 12%,#9d9e54);
+    color:#000;
+    padding:90px 0 60px;
+    text-align:center;
+    height:100vh;}
+#homepage .jumbo h1{font-size:64px;font-weight:700;margin:0 0 0px;}
+#homepage .jumbo h2{font-size:40px;font-weight:700;margin:0 0 0px;}
+#homepage .jumbo a{color:#000;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
+#homepage .jumbo a:hover{border-bottom:2px solid rgba(255,255,255,.7)}
+#homepage .jumbo .newadds{font-size:18px;margin-bottom:30px;font-weight:300}
+#homepage .jumbo .input-group{max-width:640px;margin:0 auto}
+#homepage .jumbo .main-search{border:0;height:48px;line-height:48px;font-size:16px;padding:10px 20px}
+#homepage .jumbo .main-search:focus{-webkit-box-shadow:none;box-shadow:none}
+#homepage .jumbo .main-search::-webkit-input-placeholder{color:#888}#homepage .jumbo .main-search:-moz-placeholder{color:#888}#homepage .jumbo .main-search::-moz-placeholder{color:#888}#homepage .jumbo .main-search:-ms-input-placeholder{color:#888}#homepage .jumbo .main-search-btn{background:#fff;border:0;height:48px;width:55px;font-size:22px;line-height:1;color:#777;box-shadow:none}#homepage .jumbo .main-search-btn:hover{color:#444}#homepage .jumbo .main-search-btn:active{box-shadow:none;color:#333}#homepage .jumbo .popular-tags{max-width:600px;margin:25px auto 0;text-align:center}#homepage .jumbo .popular-tags h5{font-size:18px;margin:0 0 15px;font-weight:700}#homepage .jumbo .popular-tags a{display:inline-block;margin:0 5px 10px}#homepage .jumbo .popular-tags a:hover{margin-bottom:9px}#homepage .madeby{margin-top:40px}#homepage .madeby a{text-transform:uppercase;text-decoration:none;display:inline-block;font-weight:700;font-size:16px;background:rgba(255,255,255,.25);padding:10px 25px;border-radius:40px;color:#fff;letter-spacing:1px;border:0}#homepage .madeby a:hover{background:rgba(255,255,255,.4);border:0}#homepage .page-wrap{padding-top:0}#homepage #main h1{margin-bottom:40px}

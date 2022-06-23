@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Importacion>
+  <Nombre>Palet_Creado</Nombre>
+  <Fecha>19/06/21</Fecha>
+  <Hora>21:0 :00</Hora>
+  <Trabajo>
+    <SerieParteProduccion />
+    <NumeroParteProduccion>162639</NumeroParteProduccion>
+    <DatosComplementarios>
+      <DatoComplementarioValor>
+        <DatoComplementario>AN7</DatoComplementario>
+        <Valor>Completo</Valor>
+      </DatoComplementarioValor>
+      <DatoComplementarioValor>
+        <DatoComplementario>19-54-01810</DatoComplementario>
+        <Valor>AN5</Valor>
+      </DatoComplementarioValor>
+    </DatosComplementarios>
+    <LineaProduccion>PT1</LineaProduccion>
+    <CodigoDeBarras>1195401810585</CodigoDeBarras>
+    <Detalle>
+      <Linea>
+        <Articulo>ART_5101101</Articulo>
+        <Pale>PAL_54</Pale>
+        <Envase>ENV_11233</Envase>
+        <CantidadEnvases>62</CantidadEnvases>
+        <DatosOrigen>
+          <PartidaOrigen>
+            <PartidaSerie>R</PartidaSerie>
+            <PartidaNumero>130924,130964,130974,130976</PartidaNumero>
+            <CantidadOrigen />
+          </PartidaOrigen>
+        </DatosOrigen>
+      </Linea>
+    </Detalle>
+  </Trabajo>
+</Importacion>

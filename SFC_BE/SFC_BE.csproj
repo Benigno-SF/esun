@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{054A6A95-3C24-4855-BF77-4138C149631D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SFC_BE</RootNamespace>
+    <AssemblyName>SFC_BE</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlmacenBE.cs" />
+    <Compile Include="AreaGrupoBE.cs" />
+    <Compile Include="AreaGrupoClienteBE.cs" />
+    <Compile Include="AreaProcesoBE.cs" />
+    <Compile Include="AsistenciaBE.cs" />
+    <Compile Include="BaseParametrosBE.cs" />
+    <Compile Include="BorrarFotoBE.cs" />
+    <Compile Include="CajasOEBE.cs" />
+    <Compile Include="CampanaBE.cs" />
+    <Compile Include="CertificadoCalidadBE.cs" />
+    <Compile Include="ClienteBE.cs" />
+    <Compile Include="ClienteProdBE.cs" />
+    <Compile Include="CmbCampanaBE.cs" />
+    <Compile Include="Combinaciones_TareoBE.cs" />
+    <Compile Include="ConsHispBE.cs" />
+    <Compile Include="ConsNisiraBE.cs" />
+    <Compile Include="ContabilidadBE.cs" />
+    <Compile Include="ControlfechasBE.cs" />
+    <Compile Include="CultivoEmbalajeBE.cs" />
+    <Compile Include="CultivoPackingBE.cs" />
+    <Compile Include="CultivoPackingVariedadBE.cs" />
+    <Compile Include="CultivoTemperaturaBE.cs" />
+    <Compile Include="DatosPrevisionComprasBE.cs" />
+    <Compile Include="DiagnosticoMedicoBE.cs" />
+    <Compile Include="DispositivosMonitoreoBE.cs" />
+    <Compile Include="DisTarBE.cs" />
+    <Compile Include="EspecificacionBE.cs" />
+    <Compile Include="EspecificacionDetalleBE.cs" />
+    <Compile Include="EspecificacionMonitorBE.cs" />
+    <Compile Include="FotosCalidadBE.cs" />
+    <Compile Include="FrioZonBE.cs" />
+    <Compile Include="GBusquedaBE.cs" />
+    <Compile Include="GuiaBE.cs" />
+    <Compile Include="Inv_AntivirusBE.cs" />
+    <Compile Include="Inv_AreaBE.cs" />
+    <Compile Include="Inv_AsignacionBE.cs" />
+    <Compile Include="Inv_DetalleDeviceBE.cs" />
+    <Compile Include="Inv_DeviceBE.cs" />
+    <Compile Include="Inv_IncidenciaBE.cs" />
+    <Compile Include="Inv_MarcaBE.cs" />
+    <Compile Include="Inv_OfficeBE.cs" />
+    <Compile Include="Inv_ProcesadorBE.cs" />
+    <Compile Include="Inv_SOBE.cs" />
+    <Compile Include="Inv_TipoDeviceBE.cs" />
+    <Compile Include="Inv_UbicacionBE.cs" />
+    <Compile Include="LecturaAPPBE.cs" />
+    <Compile Include="LineaNavieraBE.cs" />
+    <Compile Include="LugarBE.cs" />
+    <Compile Include="EmbalajeBE.cs" />
+    <Compile Include="DocumentoBE.cs" />
+    <Compile Include="FichaBE.cs" />
+    <Compile Include="FichaMesBE.cs" />
+    <Compile Include="FichaPersonalBE.cs" />
+    <Compile Include="FichaRespuestaBE.cs" />
+    <Compile Include="FundoDispositivoBE.cs" />
+    <Compile Include="IncidenciaBE.cs" />
+    <Compile Include="IngresoProductoBE.cs" />
+    <Compile Include="InstruccionEmbarqueBE.cs" />
+    <Compile Include="IntegranteBE.cs" />
+    <Compile Include="MaestranzaBE.cs" />
+    <Compile Include="NavioBE.cs" />
+    <Compile Include="ObservacionOEBE.cs" />
+    <Compile Include="OrdenEmbarqueBE.cs" />
+    <Compile Include="OrganigramaBE.cs" />
+    <Compile Include="ParadasProcesoBE.cs" />
+    <Compile Include="ParametroGeneralBE.cs" />
+    <Compile Include="PerfilCambiopsw.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="PersonaBE.cs" />
+    <Compile Include="PiscinaBE.cs" />
+    <Compile Include="PiscinaRegBE.cs" />
+    <Compile Include="PlanillaBE.cs" />
+    <Compile Include="PlantaBE.cs" />
+    <Compile Include="PresLineBE.cs" />
+    <Compile Include="PresMenBE.cs" />
+    <Compile Include="PrevisionesComprasBE.cs" />
+    <Compile Include="PrevisionesComprasCabeceraBE.cs" />
+    <Compile Include="PrevisionesComprasDetalleBE.cs" />
+    <Compile Include="ProcesoPaletBE.cs" />
+    <Compile Include="ProveedorAlmacenBE.cs" />
+    <Compile Include="PTComboCultivo.cs" />
+    <Compile Include="RecepcionBE.cs" />
+    <Compile Include="ConsExternaBE.cs" />
+    <Compile Include="ConductorBE.cs" />
+    <Compile Include="ControlBE.cs" />
+    <Compile Include="ControlGaritaBE.cs" />
+    <Compile Include="ControlFotoBE.cs" />
+    <Compile Include="ControlNroMuestraBE.cs" />
+    <Compile Include="ControlNroMuestraDetalleBE.cs" />
+    <Compile Include="ControlNroMuestraDetalleObsBE.cs" />
+    <Compile Include="ControlTransferenciaBE.cs" />
+    <Compile Include="CultivoBE.cs" />
+    <Compile Include="CultivoCaracteristicaBE.cs" />
+    <Compile Include="DispositivoBE.cs" />
+    <Compile Include="EmpresaBE.cs" />
+    <Compile Include="EventoProgBE.cs" />
+    <Compile Include="EventoProgDetalleBE.cs" />
+    <Compile Include="FormatoBE.cs" />
+    <Compile Include="FormatoDetalleBE.cs" />
+    <Compile Include="FundoBE.cs" />
+    <Compile Include="MonitorBE.cs" />
+    <Compile Include="MonitorSubLineaBE.cs" />
+    <Compile Include="OrdenCargaBE.cs" />
+    <Compile Include="PalletBE.cs" />
+    <Compile Include="PalletMovBE.cs" />
+    <Compile Include="PanelInfoBE.cs" />
+    <Compile Include="PersonalBE.cs" />
+    <Compile Include="PresupuestoBE.cs" />
+    <Compile Include="PresupuestoDefinicionBE.cs" />
+    <Compile Include="PresupuestoIndirectoBE.cs" />
+    <Compile Include="PresupuestoIndirectoDetalleBE.cs" />
+    <Compile Include="PresupuestoResumenBE.cs" />
+    <Compile Include="PresupuestoResumenDetalleBE.cs" />
+    <Compile Include="PresupuestoUnidadNegBE.cs" />
+    <Compile Include="PresupuestoVersionBE.cs" />
+    <Compile Include="PresupuestoVersionDefinicionBE.cs" />
+    <Compile Include="PresupuestoVersionDetalleBE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecepciontiempoBE.cs" />
+    <Compile Include="RecepciontiempoconfiguracionBE.cs" />
+    <Compile Include="RecepciontiempodetalleBE.cs" />
+    <Compile Include="RegPalet.cs" />
+    <Compile Include="Reg_Chofe_PlacaBE.cs" />
+    <Compile Include="Reg_Sup_EvaluadorBE.cs" />
+    <Compile Include="RendimientoPackingBE.cs" />
+    <Compile Include="RendimientoProcesoBE.cs" />
+    <Compile Include="RendimientoProcesoDetalleBE.cs" />
+    <Compile Include="RendimientoProcesoRegistroBE.cs" />
+    <Compile Include="ReportCalid.cs" />
+    <Compile Include="ReporteAnalisisComprasBE.cs" />
+    <Compile Include="ReporteGeneralCalidadBE.cs" />
+    <Compile Include="ReporteSotcksBE.cs" />
+    <Compile Include="ReporteSotcksComparativoBE.cs" />
+    <Compile Include="RutasBE.cs" />
+    <Compile Include="SaldoxCobrarBE.cs" />
+    <Compile Include="SmsBE.cs" />
+    <Compile Include="SubLineaBE.cs" />
+    <Compile Include="SueldoMaesBE.cs" />
+    <Compile Include="TablaCecoBE.cs" />
+    <Compile Include="TareoBE.cs" />
+    <Compile Include="TicketAlimentoBE.cs" />
+    <Compile Include="TipoDocumentoBE.cs" />
+    <Compile Include="TipoEventoBE.cs" />
+    <Compile Include="TrackBE.cs" />
+    <Compile Include="UbicacionBE.cs" />
+    <Compile Include="UnidadMedidaBE.cs" />
+    <Compile Include="UnidadNegBE.cs" />
+    <Compile Include="UpdateExtraBE.cs" />
+    <Compile Include="UsuarioBE.cs" />
+    <Compile Include="UsuarioProveedor.cs" />
+    <Compile Include="VehiculoBE.cs" />
+    <Compile Include="Verif_DocumentoBE.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

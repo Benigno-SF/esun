@@ -1,0 +1,323 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="get">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdFicha" type="xs:int" minOccurs="0" />
+                <xs:element name="cTitulo" type="xs:string" minOccurs="0" />
+                <xs:element name="cSubtitulo" type="xs:string" minOccurs="0" />
+                <xs:element name="cDescripcion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdFicha" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdFichaPersonal" type="xs:int" minOccurs="0" />
+                <xs:element name="cRazonSocialEmpr" type="xs:string" minOccurs="0" />
+                <xs:element name="cRuc" type="xs:string" minOccurs="0" />
+                <xs:element name="nIdPersonal" type="xs:int" minOccurs="0" />
+                <xs:element name="cNombre" type="xs:string" minOccurs="0" />
+                <xs:element name="cDireccion" type="xs:string" minOccurs="0" />
+                <xs:element name="cCelular" type="xs:string" minOccurs="0" />
+                <xs:element name="dFechaNac" type="xs:string" minOccurs="0" />
+                <xs:element name="nEdad" type="xs:int" minOccurs="0" />
+                <xs:element name="dFecha" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdFicha" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdFichaGrupo" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdFichaPersonal" type="xs:int" minOccurs="0" />
+                <xs:element name="cTitulo" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="get3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdFicha" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdFichaGrupo" type="xs:int" minOccurs="0" />
+                <xs:element name="nIdFichaPersonal" type="xs:int" minOccurs="0" />
+                <xs:element name="cPregunta" type="xs:string" minOccurs="0" />
+                <xs:element name="rSi" type="xs:string" minOccurs="0" />
+                <xs:element name="rNo" type="xs:string" minOccurs="0" />
+                <xs:element name="cObs" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <get>
+    <nIdFicha>4</nIdFicha>
+    <cTitulo>IDENTIFICACION DE SINTOMATOLOGIA COVID – 19 PREVIO AL INGRESO AL CENTRO DE TRABAJO</cTitulo>
+    <cSubtitulo>FICHA DE SINTOMATOLOGIA COVID – 19</cSubtitulo>
+    <cDescripcion>HE RECIBIDO EXPLICACION DE OBJETO DE ESTA SITUACION Y ME COMPROMETO A RESPONDER CON LA VERDAD, TAMBIEN HE TENIDO INFORMADO QUE DE OMITIR O FALSEAR INFORMACION ESTARE PERJUDICANDO LA SALUD DE MIS COMPAÑEROS, LO CUAL ES UNA FALTA GRAVE.</cDescripcion>
+  </get>
+  <get1>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cRazonSocialEmpr>SUN FRUITS EXPORTS S.A.</cRazonSocialEmpr>
+    <cRuc>20494586810</cRuc>
+    <nIdPersonal>178</nIdPersonal>
+    <cNombre>YSABEL MARGOT JAYO PINEDA</cNombre>
+    <cDireccion>Av. La Victoria #1010 - San Joaquin</cDireccion>
+    <cCelular>935586658</cCelular>
+    <dFechaNac>05/11/1964</dFechaNac>
+    <nEdad>55</nEdad>
+    <dFecha>14/07/2020</dFecha>
+  </get1>
+  <get2>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cTitulo>EN LOS ULTIMOS 14 DIAS HA TENIDO ALGUNO DE LOS SINTOMAS SIGUIENTES:</cTitulo>
+  </get2>
+  <get2>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>2</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cTitulo>En los últimos 14 días (Detallar de ser afirmativa la respuesta)</cTitulo>
+  </get2>
+  <get2>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cTitulo>TIENE LOS SIGUIENTES FACTORES DE SALUD:</cTitulo>
+  </get2>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>1.- Sensación de alza térmica o fiebre (Especificar)</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>2.- Tos, estornudos o dificultades para respirar</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>3.- Dolor de garganta</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>4.- Congestión o secreción nasal</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>5.- Expectoración o flema amarillo o verdosa</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>6.- Perdida de olfato o perdida del gusto</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>7.- Dolor abdominal, nauseas o diarrea</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>8.- Dolor en el pecho</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>9.- Desorientación o contusión</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>10.- Coloración azul en los labios</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>1</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>11.- Está tomando alguna medicación (Detalle):</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>2</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>1.- ha tenido contacto con personas con casos sospechosos o confirmados de COVID – 19</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>2</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>2.-Ha viajado el exterior:</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>2</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>3.- Ha visitado un establecimiento de salud</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>1.- Edad mayor de 65 años</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>2.- Hipertensión arterial</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>3.- Enfermedad cardiovascular</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>4.- Cáncer</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>5.- Diabetes mellitus</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>6.- Obesidad con IMC de 40 a mas</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>7.- Asma Moderada o Grave</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>8.- Enfermedad pulmonar crónica</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>9.- Insuficiencia renal crónica en tratamiento con hemodiálisis</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>10.- Enfermedad o tratamiento inmunosupresor</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+  <get3>
+    <nIdFicha>4</nIdFicha>
+    <nIdFichaGrupo>3</nIdFichaGrupo>
+    <nIdFichaPersonal>65</nIdFichaPersonal>
+    <cPregunta>11.- Otros (DETALLAR)</cPregunta>
+    <rSi />
+    <rNo>NO</rNo>
+    <cObs />
+  </get3>
+</NewDataSet>

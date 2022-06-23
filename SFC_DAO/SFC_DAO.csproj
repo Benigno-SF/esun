@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08A26C9B-3081-4CDA-B0CD-93AB64C6897C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SFC_DAO</RootNamespace>
+    <AssemblyName>SFC_DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SqlUtility">
+      <HintPath>..\SFC_WEB_APP\bin\SqlUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreaGrupoClienteDAO.cs" />
+    <Compile Include="AreaGrupoDAO.cs" />
+    <Compile Include="AreaProcesoDAO.cs" />
+    <Compile Include="AsistenciaDAO.cs" />
+    <Compile Include="CajasOEDAO.cs" />
+    <Compile Include="CalidadReDAO.cs" />
+    <Compile Include="CampanaDAO.cs" />
+    <Compile Include="CertificadoCalidadDAO.cs" />
+    <Compile Include="ClienteDAO.cs" />
+    <Compile Include="ClienteProdDAO.cs" />
+    <Compile Include="Combinaciones_TareoDAO.cs" />
+    <Compile Include="ConsHispDAO.cs" />
+    <Compile Include="ConsNisiraDAO.cs" />
+    <Compile Include="ContabilidadDAO.cs" />
+    <Compile Include="CultivoPackingDAO.cs" />
+    <Compile Include="CultivoPackingVariedadDAO.cs" />
+    <Compile Include="CultivoTemperaturaDAO.cs" />
+    <Compile Include="DatosPrevisionComprasDAO.cs" />
+    <Compile Include="DispositivosMonitoreoDAO.cs" />
+    <Compile Include="EmpresaDAO.cs" />
+    <Compile Include="EspecificacionDAO.cs" />
+    <Compile Include="EspecificacionDetalleDAO.cs" />
+    <Compile Include="EspecificacionMonitorDAO.cs" />
+    <Compile Include="FamiliasArticuloDAO.cs" />
+    <Compile Include="ClientesYProductoresDAO.cs" />
+    <Compile Include="FrioDAO.cs" />
+    <Compile Include="FrioErrorDAO.cs" />
+    <Compile Include="GuiaDAO.cs" />
+    <Compile Include="InventarioDAO.cs" />
+    <Compile Include="Inv_AreaDAO.cs" />
+    <Compile Include="Inv_AsignacionDAO.cs" />
+    <Compile Include="Inv_DeviceDAO.cs" />
+    <Compile Include="Inv_AntivirusDAO.cs" />
+    <Compile Include="Inv_IncidenciaDAO.cs" />
+    <Compile Include="Inv_MarcaDAO.cs" />
+    <Compile Include="Inv_OfficeDAO.cs" />
+    <Compile Include="Inv_ProcesadorDAO.cs" />
+    <Compile Include="Inv_SODAO.cs" />
+    <Compile Include="Inv_TipoDeviceDAO.cs" />
+    <Compile Include="Inv_UbicacionDAO.cs" />
+    <Compile Include="LineaNavieraDAO.cs" />
+    <Compile Include="LugarDAO.cs" />
+    <Compile Include="EmbalajeDAO.cs" />
+    <Compile Include="DocumentoDAO.cs" />
+    <Compile Include="FichaMesDAO.cs" />
+    <Compile Include="FichaPersonalDAO.cs" />
+    <Compile Include="FichaRespuestaDAO.cs" />
+    <Compile Include="IncidenciaDAO.cs" />
+    <Compile Include="IngresoProductoDAO.cs" />
+    <Compile Include="InstruccionEmbarqueDAO.cs" />
+    <Compile Include="IntegranteDAO.cs" />
+    <Compile Include="NavioDAO.cs" />
+    <Compile Include="ObservacionOEDAO.cs" />
+    <Compile Include="OrdenEmbarqueDAO.cs" />
+    <Compile Include="OrganigramaDAO.cs" />
+    <Compile Include="ParadasProcesoDAO.cs" />
+    <Compile Include="ParametroGeneralDAO.cs" />
+    <Compile Include="ParteproduccionDAO.cs" />
+    <Compile Include="PersonaDAO.cs" />
+    <Compile Include="PersonalDAO.cs" />
+    <Compile Include="PiscinaDAO.cs" />
+    <Compile Include="PiscinaRegDAO.cs" />
+    <Compile Include="PlanillaDAO.cs" />
+    <Compile Include="PlantaDAO.cs" />
+    <Compile Include="PrevisionesComprasDAO.cs" />
+    <Compile Include="ProveedorAlmacenDAO.cs" />
+    <Compile Include="RecepcionDAO.cs" />
+    <Compile Include="ConexionDAO.cs" />
+    <Compile Include="ConsExternaDAO.cs" />
+    <Compile Include="ConductorDAO.cs" />
+    <Compile Include="ControlDAO.cs" />
+    <Compile Include="ControlGaritaDAO.cs" />
+    <Compile Include="ControlNroMuestraDAO.cs" />
+    <Compile Include="ControlTransferenciaDAO.cs" />
+    <Compile Include="CultivoCaracteristicaDAO.cs" />
+    <Compile Include="CultivoDAO.cs" />
+    <Compile Include="DispositivoDAO.cs" />
+    <Compile Include="EventoProgDAO.cs" />
+    <Compile Include="EventoProgDetalleDAO.cs" />
+    <Compile Include="FormatoDAO.cs" />
+    <Compile Include="FormatoDetalleDAO.cs" />
+    <Compile Include="FundoDAO.cs" />
+    <Compile Include="MonitorDAO.cs" />
+    <Compile Include="MonitorSubLineaDAO.cs" />
+    <Compile Include="OrdenCargaDAO.CS" />
+    <Compile Include="PalletMovDAO.cs" />
+    <Compile Include="PanelInfoDAO.cs" />
+    <Compile Include="PresupuestoDAO.cs" />
+    <Compile Include="PresupuestoDefinicionDAO.cs" />
+    <Compile Include="PresupuestoIndirectoDAO.cs" />
+    <Compile Include="PresupuestoPeriodoDAO.cs" />
+    <Compile Include="PresupuestoResumenDAO.cs" />
+    <Compile Include="PresupuestoUnidadNegDAO.cs" />
+    <Compile Include="PresupuestoVersionDAO.cs" />
+    <Compile Include="PresupuestoVersionDetalleDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecepciontiempoconfiguracionDAO.cs" />
+    <Compile Include="RecepciontiempodetalleDAO.cs" />
+    <Compile Include="RegPaletDAO.cs" />
+    <Compile Include="Reg_Chofe_PlacaDAO.cs" />
+    <Compile Include="Reg_Sup_EvaluadorDAO.cs" />
+    <Compile Include="RendimientoPackingDAO.cs" />
+    <Compile Include="RendimientoProcesoDAO.cs" />
+    <Compile Include="RendimientoProcesoDetalleDAO.cs" />
+    <Compile Include="RendimientoProcesoRegistroDAO.cs" />
+    <Compile Include="ReporteAnalisisComprasDAO.cs" />
+    <Compile Include="ReporteGeneralCalidadDAO.cs" />
+    <Compile Include="ReporteSotcksDAO.cs" />
+    <Compile Include="SaldoxCobrarDAO.cs" />
+    <Compile Include="SubLineaDAO.cs" />
+    <Compile Include="TareoDAO.cs" />
+    <Compile Include="TicketAlimentoDAO.cs" />
+    <Compile Include="RecepciontiempoDAO.cs" />
+    <Compile Include="TipoDocumentoDAO.cs" />
+    <Compile Include="TipoEventoDAO.cs" />
+    <Compile Include="TrackDAO.cs" />
+    <Compile Include="UbicacionDAO.cs" />
+    <Compile Include="UnidadMedidaDAO.cs" />
+    <Compile Include="UnidadNegDAO.cs" />
+    <Compile Include="UsuarioDAO.cs" />
+    <Compile Include="VehiculoDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SFC_BE\SFC_BE.csproj">
+      <Project>{054a6a95-3c24-4855-bf77-4138c149631d}</Project>
+      <Name>SFC_BE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

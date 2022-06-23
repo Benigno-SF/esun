@@ -1,0 +1,523 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SFC_WEB_APP.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <title>e-sun</title>
+    <link rel="apple-touch-icon" href="<%=ResolveUrl("~/Img/apple-icon-120.png")%>" />
+    <link rel="shortcut icon" type="image/x-icon" href="<%=ResolveUrl("~/Img/favicon.ico")%>" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Content/feather.css")%>" rel="stylesheet" />
+    
+    <%: Styles.Render("~/Content/css") %>
+    <%: Scripts.Render("~/jquery") %>
+    <script>
+        function fuGetCdEmpre() {
+            var url_string = window.location.href
+            var url = new URL(url_string);
+            var Cd = url.searchParams.get("Cd");
+            return Cd;
+        };
+
+        $(function () {
+            var pathname = window.location.pathname;
+            var lsUrl = pathname.split("/");
+            var urlall = lsUrl[(lsUrl.length - 1)];
+            var url = urlall.split("-")[0];
+            var Cd = fuGetCdEmpre();
+            $(document.body).find('[href="' + url + '.aspx?Cd=' + Cd + '"][data-empr="' + Cd + '"]').parent().addClass("active");
+        });
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+
+        //$("#mnuMapsLotes").attr("href", "http://172.16.16.27/sf/?code=0021" + getCookie('EsunUser'));
+    </script>
+    <style>
+        .bgtbl 
+        {
+            background: rgba(255,255,255,0.5) !important;
+        }
+            .bgtbl tr th {
+                background-color: #d9edf7 !important;
+            }
+        .mybtn {
+            display: inline-block;
+            padding: 0px 0.15rem;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 0px solid transparent;
+            border-radius: 2px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <%--<script src="<%=ResolveUrl("~/Scripts/Inputmask/dist/jquery.inputmask.js") %>"></script>--%>
+</head>
+<body class="vertical-layout vertical-menu-modern 2-columns   fixed-navbar" data-menu="vertical-menu-modern" data-col="2-columns">
+    <form id="frmMain" runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top navbar-dark navbar-shadow">
+            <div class="navbar-wrapper">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav flex-row">
+                        <li class="nav-item mobile-menu d-lg-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                        <li class="nav-item mr-auto"><a class="navbar-brand" href="<%= ResolveUrl("~/") %>">
+                            <img class="brand-logo" alt="stack admin logo" src="<%=ResolveUrl("~/Img/stack-logo.png") %>" />
+                            <h2 class="brand-text">e-sun</h2>
+                        </a></li>
+                        <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>
+                        <li class="nav-item d-lg-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-container content">
+                    <div class="collapse navbar-collapse" id="navbar-mobile">
+                        <ul>
+                            <img src="../Img/e-sun_logo-min.png" style="width:50%;margin-top:15px"/>
+                        </ul>
+                        <ul class="nav navbar-nav mr-auto float-left">
+                            <asp:ContentPlaceHolder ID="MenuBar" runat="server">
+                            </asp:ContentPlaceHolder>
+
+<%--                            <li class="dropdown nav-item mega-dropdown d-none d-lg-block">
+                                <asp:LinkButton runat="server" ID="lkbChaBuss" CssClass="nav-link" OnClick="lkbChaBuss_Click"><i class="far fa-building"></i><span style="font-weight: bold; color: white;" id="sel_cliente"> SUN FRUITS  S.A.</span></asp:LinkButton>
+                            </li>--%>
+                        </ul>
+
+                        <ul class="nav navbar-nav float-right">
+                            <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="avatar avatar-online">
+                                <img src="<%= ResolveUrl("~/Img/avatar.png") %>" alt="avatar" />
+                                <i></i></span><span runat="server" id="spUser" class="user-name"></span></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <asp:LinkButton runat="server" ID="lkbAccount" CssClass="dropdown-item" OnClick="lkbAccount_Click"><i class="fa fa-user"></i> Mi cuenta</asp:LinkButton>
+                                    <asp:LinkButton runat="server" ID="lkbChaPsw" CssClass="dropdown-item" OnClick="lkbChaPsw_Click"><i class="fa fa-key"></i> Cambiar mi contraseña </asp:LinkButton>
+                                    <div class="dropdown-divider"></div>
+                                    <asp:LinkButton runat="server" ID="lkbLogOutm" CssClass="dropdown-item" OnClick="lkbLogOutm_Click"><i class="fa fa-power-off"></i> Salir</asp:LinkButton>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true" runat="server" id="apMenu">
+            <div class="main-menu-content">
+                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                    
+                    
+                      <li><a class="menu-item" runat="server" id="mnuPrevEntrada" href="~/Mod_Extr/Wfo_ProvMP.aspx"><i class="fa fa-cogs"></i>Previsión entrada por día</a>
+                            </li>
+                    <li class=" navigation-header" runat="server" id="mnuSFP" visible="true"><span>Sun Fruits Packs</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="General"></i>
+                    </li>
+                    <li class=" navigation-header" runat="server" id="mnuSFE"><span>Sun Fruits Export</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="General"></i>
+                    </li>
+                    <li class=" nav-item"><a runat="server" id="mnuCali"><i class="fa fa-thermometer-quarter"></i><span class="menu-title">Calidad</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnRepCalidadGC" href="~/Mod_Cali/Wfo_RepCaEst.aspx">Reporte Calidad</a></li>
+                            <li><a class="menu-item" runat="server" id="mnuRepPalta" href="~/Mod_Cali/WfoRepPalta.aspx">Reporte Calidad Palta</a></li>
+                            <li><a class="menu-item" runat="server" id="mnucertCal" href="~/Mod_Cali/Wfo_CertificadoCalidad.aspx">Evaluaciones Calidad</a></li>
+                            <li><a class="menu-item" runat="server" id="mnuRepGenCalidad" href="~/Mod_Cali/Wfo_RepGeneralCalidad.aspx">Reporte General Calidad</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuAlm" href="#"><i class="fas fa-warehouse"></i><span class="menu-title">Almacen</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuReq" href="~/Mod_Alm/Wfo_InfReqConsumo.aspx">Requerimientos de Consumo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuReqExis" href="~/Mod_Logi/Wfo_ReqvsExistencia.aspx">Requerimiento Vs Existencias</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-sub"><a runat="server" id="mnuAdmi" href="#"><i class="fa fa-users"></i><span class="menu-title">Administración</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuCcoDitribuidos" href="~/Mod_Admi/Wfo_ReporteCostosDistribuidos.aspx">Costos Distribuidos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuReporteVentas" href="~/Mod_Admi/Wfo_ReporteVentas.aspx">Reporte Ventas</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiGastoxCC" href="~/Mod_Admi/Wfo_GastosPorCC.aspx">Informe Gasto x CC</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuConSalxcobrar" href="~/Mod_Admi/Wfo_Saldoporcobrar.aspx">Consolidado Saldo por cobrar</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiOrga" href="~/Mod_Admi/Wfo_Organigrama.aspx">Organigrama</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiRevProcesos" href="~/Mod_Admi/Wfo_RevisionProcesos.aspx">Revision Procesos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiRepGerCostos" href="~/Mod_Admi/Wfo_ReporteGerencialCostos.aspx">Rep. Gerencial Costos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiRepCosteo" href="~/Mod_Admi/Wfo_Costeo.aspx">Rep. Costeo </a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuCostoMOSemana" href="~/Mod_Admi/Wfo_CosteoMOSemanal.aspx">Rep. Costeo M.O. por Semana </a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiInventarioAlm" href="~/Mod_Admi/Wfo_InventarioAlmacen.aspx">Rep. Rotacion Productos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAdmiPackingList" href="~/Mod_Admi/Wfo_RepPakingListFact.aspx">Rep. Packing List Facturados</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRepRepaAdm" href="~/Mod_Admi/Wfo_RepoReparacionesAdm.aspx">Repo. Reparaciones</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuRecep" href="#"><i class="fa fa-users"></i><span class="menu-title">Recepción</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuRecepGasificado" href="~/Mod_Recep/Wfo_Gasificado.aspx">Gasificado</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRecepGasCam" href="~/Mod_Recep/Wfo_GasificadoReporte.aspx">Gasificado R. por cámara</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRecepGasPal" href="~/Mod_Recep/Wfo_GasificadoReporte_PaletsPorTunel.aspx">Gasificado R. por Palet</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRecepCt" href="~/Mod_App/Wfo_Tiemporecepcion_Actualizar.aspx">C. de tiempo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRecepCtRpt" href="~/Mod_App/Wfo_Tiemporecepcion.aspx">C. de tiempo - Reporte</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuFrio" href="#"><i class="fa fa-snowflake"></i><span class="menu-title">Frio</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuFrioOrdenCarga" href="~/Mod_Frio/Wfo_OrdCarga.aspx">Orden de Carga</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuFrioResuCamara" href="~/Mod_Frio/Wfo_CamResu.aspx">Resumen de Camara</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuFrioUbicPallet" href="~/Mod_Frio/Wfo_PosiPale.aspx">Ubicacion de Pallets</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuFrioConsFrio" href="~/Mod_Frio/Wfo_ConFrio.aspx">Consolidado Frio</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuFrioPaletAuto"  href="~/Mod_Frio/Wfo_PaleUbic.aspx">Rep. Zonificacion de Camaras</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuFrioKardex"  href="~/Mod_Frio/Wfo_KdxPaleta.aspx">Kardex por paleta</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnucalidad" href="#"><i class="fas fa-clipboard-check"></i><span class="menu-title">Calidad</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuRepCalidad" href="~/Mod_Alm/Wfo_InfReqConsumo.aspx">Reportes Calidad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuPres" href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="">Presupuesto</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuPresMaster" href="~/Mod_Pres/Wfo_PresMaster.aspx">Conf. Presupuesto</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuPresIndirecto" href="~/Mod_Pres/Wfo_PresIndirecto.aspx">Presupuesto Indirecto</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuPresUnidNegocio" href="~/Mod_Pres/Wfo_UnidNegocio-Repo.aspx">Hoja de Trabajo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuConfProd" href="~/Mod_Pres/Wfo_ConfProd.aspx">Validar conf. Productos</a>
+                            </li>
+                             <li><a class="menu-item" runat="server" id="mnuPresMen" href="~/Mod_Pres/Wfo_PresMen.aspx">Cfg.Presupuesto Mensual</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuProd" href="#"><i class="fa fa-cubes"></i><span class="menu-title" data-i18n="">Producción</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuProdParteTransf" href="~/Mod_Prod/Wfo_ParteTransf.aspx">Parte de Transformacion</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdCampania" href="~/Mod_Prod/Wfo_ComparativoCampania.aspx">Comparativo por Campaña</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdProyectado" href="~/Mod_Prod/Wfo_vsProyectado.aspx">Fruta Recepcionada</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuVolcadoXlineaHora" href="~/Mod_Prod/Wfo_VolcadoProceso.aspx">Abast. Linea x Hora</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdRecepMP" href="~/Mod_Prod/Wfo_RecepcionMP.aspx">Ingreso de MP</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuIParteTransform" href="~/Mod_Prod/Wfo_InformeParteTransformacion.aspx">Inf. Parte Transformacion</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdInfoLinea" href="~/Mod_Prod/Wfo_InfoLine.aspx">Información de Linea</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdAsigPers" href="~/Mod_Prod/Wfo_AssigPersonal.aspx">Asignación de Personal</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAnularEtiqueta" href="~/Mod_Prod/Wfo_AnularEtiquetas.aspx">Anulacion de Etiquetas</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdRendimiento" href="~/Mod_Prod/Wfo_ReadLineas2.aspx">Rendimiento de Lineas</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdRRendimiento" href="~/Mod_Prod/Wfo_ReporteRendimiento.aspx">Reporte de Proceso</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuDetProceso" href="~/Mod_Prod/Wfo_DetalleProceso.aspx">Detalle de Proceso</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRendimientoxUser" href="~/Mod_Prod/Wfo_IRUsuario.aspx">Rend. x Personal</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAvancePersonal" href="~/Mod_Prod/Wfo_AvancePersonal.aspx">Avance Personal</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuProdPaletAct" href="~/Mod_Prod/Wfo_ActualizaPesoPalet.aspx">Peso Palet</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRepPesoPalet" href="~/Mod_Prod/Wfo_RepPesoPaleta.aspx">Rep Peso Palet</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAvanceProd" href="~/Mod_Prod/Wfo_AvanceProduccion.aspx">Rep Avance Proceso Det</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuParadasProceso" href="~/Mod_Prod/Wfo_ParadasProceso.aspx">Paradas Proceso</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuRRHH" href="#"><i class="fa fa-users"></i><span class="menu-title" data-i18n="">RRHH</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuRRHHBoleta" href="~/Mod_RRHH/Wfo_BoletaRep.aspx">Impresión de Boletas</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHTickComedor" href="~/Mod_RRHH/Wfo_TicketComedor.aspx">Tickets Comedor</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHSyncTareo" href="~/Mod_RRHH/Wfo_SyncTareo.aspx">Sincronizar tareo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuPreInscrip" href="~/Mod_RRHH/Wfo_PreInscripcionPersonal.aspx">Personal PreInscrito</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuSendSms" href="~/Mod_RRHH/Wfo_EnvioInfMasiva.aspx">Mensajes Masivo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHRepComedor" href="~/Mod_RRHH/Wfo_ComedorRepo.aspx">Reporte de Comedor</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHAsistencia" href="~/Mod_RRHH/Wfo_ViewAsistencia.aspx">Rep. Asistencia</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHFichaC" href="~/Mod_RRHH/Wfo_FichaCovid19.aspx">Ficha Sint. Covid 19</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHCCosto" href="~/Mod_RRHH/Wfo_RRHHExc.aspx">Centro de costos - Personal</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHVerifyPer" href="~/Mod_RRHH/Wfo_VerificaPersonal.aspx">Verificar Nuevo Personal</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHVerifyImg" href="~/Mod_RRHH/Wfo_VerificarImagen.aspx">Verificar Img Nsr</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRRHHHorComedor" href="~/Mod_RRHH/Wfo_HorComedor.aspx">Horario Comedor</a>
+                            </li>
+                             <li><a class="menu-item" runat="server" id="mnuImpCapacitaciones" href="~/Mod_RRHH/Wfo_ImpCapacitaciones.aspx">Imp Capacitaciones</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRepoHorasAct" href="~/Mod_RRHH/Wfo_RepoHorasActividad.aspx">Rep Horas Actividad</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuTareoAdicional" href="~/Mod_RRHH/Wfo_TareoAdicional.aspx">Tareas Adicionales</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRepAsisGerencia" href="~/Mod_RRHH/Wfo_AsistenciaJefatura.aspx">Rep. Asiste.. / Vacaci.. </a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRegiDocumentos" href="~/Mod_RRHH/Wfo_Planilla.aspx">Registro Documentos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuHistoricoIngSal" href="~/Mod_RRHH/Wfo_HisSalidasIngresos.aspx">Historico Salidas e Ingresos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuAgro" href="#"><i class="fa fa-tree"></i><span class="menu-title" data-i18n="">Agro</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuInfPCASimple" href="~/Mod_Agro/Wfo_InfPartCampActSimple.aspx">Partes de Campo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuSyncRV" href="~/Mod_Agro/Wfo_SyncRaptorView.aspx">Sync RV Riego</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuSyncRVApl" href="~/Mod_Agro/Wfo_SyncRV_Aplicaciones.aspx">Sync RV Aplicaciones</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuMapsLotes" href="~/Mod_Agro/Wfo_Propiedades.aspx">Doc. Op. Agricolas</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuViewMapAgro" href="~/Mod_Agro/Wfo_ViewMapLotes.aspx">Maps Inf. de Campo</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuViewMapLegal" href="~/Mod_Agro/Wfo_ViewMapLotesLegal.aspx">Maps Agricola Legal</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAgroTrack" href="~/Mod_Agro/Wfo_Track.aspx">Tracker</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuAgroTrackview" href="~/Mod_Agro/Wfo_TrackView.aspx">Track View</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuTareoCampoNis" href="~/Mod_Agro/Wfo_TareoCampo.aspx">Aprobar Tareos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuGuiaRemi" href="~/Mod_Agro/Wfo_CreateGuiaRemision.aspx">Guia Remision</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuActGuias" href="~/Mod_Agro/Wfo_TranferenciaGuias.aspx">Actualiza Guias</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuTrazaExp" href="~/Mod_Agro/Wfo_TrazabilidadExportacion.aspx">Trazabilidad Exportacion</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuCertCalidad" href="~/Mod_Agro/Wfo_RepCalPda.aspx">Repo. Cert Calidad</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRegSupEvaluadores" href="~/Mod_Agro/Wfo_Reg_Sup_Evaluador.aspx">Reg. Sup. Eval.</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRegChofPlaca" href="~/Mod_Agro/Wfo_Reg_Chofe_Placas.aspx">Reg. Chof. Placa</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuTareo" href="~/Mod_Agro/Wfo_Tareo.aspx">Tareo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuMaes" href="#"><i class="fas fa-tractor"></i><span class="menu-title" data-i18n="">Maestranza</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuRepRepa" href="~/Mod_Maes/Wfo_RepoReparaciones.aspx">Rep. Reparaciones</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuHisp" href="#"><i class="fas fa-exchange-alt"></i><span class="menu-title" data-i18n="">Transferencia</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuHispTrans" href="~/Mod_Hisp/Wfo_Transferencia.aspx">Sincronización</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuSyncHNLog" href="~/Mod_Hisp/Wfo_LogSincronizacionNH.aspx">Log Sincronización</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuLogi" href="#"><i class="fas fa-briefcase"></i><span class="menu-title" data-i18n="">Logística</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuLogiAutRquer" href="~/Mod_Logi/Wfo_AprobRequNis.aspx">Autorizar Requerimientos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuRestDocs" href="~/Mod_Logi/Wfo_RestablecerPedidos.aspx">Restablecer Documentos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuLeadTime" href="~/Mod_Logi/Wfo_RegiLifeTime.aspx">Actualizar Lead Time</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuTrazaReq" href="~/Mod_Logi/Wfo_TrazabilidadRequerimiento.aspx">Trazabilidad Requerimiento</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuTrazaDiaCompra" href="~/Mod_Logi/Wfo_ReporteAnalisisCompras.aspx">Traz. días compras</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuComex" href="#"><i class="fa fa-external-link"></i><span class="menu-title" data-i18n="">Comex</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuComexOrdenE" href="~/Mod_Cmx/Wfo_OrdenEmbarque.aspx">Orden Embarque</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuComexInstruccionE" href="~/Mod_Cmx/Wfo_InstruccionEmbarque.aspx">Instruccion Embarque</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuUpdateGuia" href="~/Mod_Cmx/Wfo_ActualizaGuiaCliente.aspx">Actualizar Guia</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-sub"><a runat="server" id="mnuTI" href="#"><i class="fas fa-laptop-code"></i><span class="menu-title" data-i18n="">TI</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuInventario" href="~/Mod_TI/Wfo_Inventario.aspx">Inventario</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuCpfXml" href="~/Mod_CPF/Wfo_ExportCpf.aspx">Xml Cpf</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuFrioSoluCam" href="~/Mod_TI/Wfo_FrioUPD.aspx">Solu. paletas frio</a>
+                            </li>
+                        </ul>
+                    </li>
+              
+                      <li class="nav-item has-sub"><a runat="server" id="mnuRepBI" href="#"><i class="fas fa-chart-line"></i><span class="menu-title">Reportes - BI</span></a>
+                        <ul class="menu-content">
+                            
+                            <li><a class="menu-item" runat="server" id="mnuRendimientoP" href="~/Mod_RepoBi/Wfo_RendimientoP.aspx">Rendimiento Packing</a>
+                            </li>
+                        </ul>
+                      </li>
+
+                    <li class="nav-item has-sub"><a runat="server" id="mnuSegu" href="#"><i class="fas fa-user-shield"></i><span class="menu-title" data-i18n="">Seguridad</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuIngresoVehiculos" href="~/Mod_Segu/Wfo_IngresoVehiculos.aspx">Ingreso Vehiculos</a>
+                            </li>
+                            <li><a class="menu-item" runat="server" id="mnuIncidencias" href="~/Mod_Segu/Wfo_Incidencias.aspx">Incidencias</a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="nav-item has-sub"><a runat="server" id="mnuUsuarios" href="#"><i class="fas fa-user-shield"></i><span class="menu-title" data-i18n="">Gestion - Usuarios</span></a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" runat="server" id="mnuMantenimiento" href="~/Mod_Usr/Wfo_Mantenimiento.aspx">Mantenimiento</a>
+                            </li>
+                         
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" style="display: none"><a runat="server" id="mnuEscaneo" href="~/Mod_Admi/Wfo_Archivos.aspx"><i class="fa fa-file"></i><span class="menu-title">Escaneo Doc</span></a>
+                    </li>
+                    <li class=" navigation-header" runat="server" id="mnuRIA"><span>Riachuelo</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="General"></i>
+                    </li>
+                    <li class=" navigation-header" runat="server" id="mnuADL"><span>Don Luis</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="General"></i>
+                    </li>
+                    <li class=" nav-item"><a runat="server" id="mnuMaesADL" href="#"><i class="fas fa-tractor"></i><span class="menu-title" data-i18n="">Maestranza</span></a>
+                        <ul class="menu-content">
+                            
+                        </ul>
+                    </li>
+                    <li class=" navigation-header" runat="server" id="mnuACV"><span>Campo Verde</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="General"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-content content">
+            <div class="content-wrapper">
+                <div class="content-header row" style="display: none;">
+                    <div class="content-header-left col-md-6 col-12 mb-2">
+                        <div class="row breadcrumbs-top">
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <asp:ContentPlaceHolder ID="SiteRoot" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </ol>
+                            </div>
+                        </div>
+                        <h3 class="content-header-title mb-0">
+                            <asp:Label ID="lblPageHead" runat="server" Text=""></asp:Label>
+                        </h3>
+                    </div>
+                </div>
+                <div class="content-body">
+                    <asp:ContentPlaceHolder ID="Titles" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="Body" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div class="sidenav-overlay"></div>
+        <%--<div class="drag-target"></div>--%>
+        <script src="<%=ResolveUrl("~/Scripts/vendors.min.js") %>"></script>
+        <%--<%: Scripts.Render("~/js/jqx") %>--%>
+        <%: Scripts.Render("~/js") %>
+        <script src="<%=ResolveUrl("~/Scripts/app.min.js") %>"></script>
+        <script src="<%=ResolveUrl("~/Scripts/app-menu.min.js") %>"></script>
+            
+        
+        <footer class="footer fixed-bottom footer-dark navbar-border">
+            <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+                <span class="float-md-left d-block d-md-inline-block"><img src="../Img/ti.png" class="image-responsive" style="width:15%;background:white;border-radius:100px" />  v. 1.01.06
+                </span><span class="float-md-right d-none d-lg-block">
+                           Powered by Área TI - Sun Fruits Corp &copy; 2018-2022</span>
+            </p>
+            
+        </footer>
+        <asp:ContentPlaceHolder ID="Footer" runat="server">
+            </asp:ContentPlaceHolder>
+        <script>
+            function removeTag(tag) {
+                var ele = document.getElementsByTagName(tag);
+                return ele[0].parentNode.removeChild(ele[0]);
+            };
+        </script>
+    </form>
+    
+    
+    <script>
+        $("#sel_cliente").html(getCookie("Lj_ksiDgS"))
+
+        function getCookie(cname) {
+            var dc = [];
+            var c2 = "";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            dc = decodedCookie.split(';');
+            for (var i = 0; i < dc.length; i++) {
+                var nc = dc[i].split('&');
+                for (var k = 0; k < nc.length; k++) {
+                    var c = nc[k];
+                    if (c.includes(cname)) {
+                        c2 = c.split('=')[1];
+                    }
+                }
+            }
+            return c2;
+        }
+
+        <%-- Resalta el menú --%>
+        var se_ur = window.location.href.split('/');
+        $(".nav-item a[href*='" + se_ur[(se_ur.length) - 1] + "']").addClass("active");
+        $(".nav-item:has(>a.active)").addClass("open");
+    </script>
+</body>
+</html>

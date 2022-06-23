@@ -1,0 +1,42 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using SFC_BE;
+
+namespace SFC_DAO
+{
+    public class MonitorDAO
+    {
+        //SqlCommand cmd;
+        SqlDataAdapter da;
+        ConexionDAO con = new ConexionDAO();
+        SqlConnection cnx;
+
+        public DataSet ListMonitor(MonitorBE e)
+        {
+            cnx = con.conectar();
+            da = new SqlDataAdapter("SP_Monitor_list", cnx);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add(new SqlParameter("@nIdMonitor", e.vnIdMonitor));
+            da.SelectCommand.Parameters.Add(new SqlParameter("@cIpMonitor", e.vcIpMonitor));
+            DataSet ds = new DataSet();
+            da.Fill(ds, "get");
+            cnx.Close();
+            return ds;
+        }
+
+        public DataSet ListMonitorArea(MonitorBE e)
+        {
+            cnx = con.conectar();
+            da = new SqlDataAdapter("SP_MonitorArea_list", cnx);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add(new SqlParameter("@nIdEmpresa", e.vnIdEmpresa));
+            da.SelectCommand.Parameters.Add(new SqlParameter("@nIdArea", e.vnIdArea));
+            DataSet ds = new DataSet();
+            da.Fill(ds, "get");
+            cnx.Close();
+            return ds;
+        }
+
+    }
+}

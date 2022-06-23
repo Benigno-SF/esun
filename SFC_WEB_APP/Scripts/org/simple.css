@@ -1,0 +1,35 @@
+.centered {
+    text-align: center;
+}
+
+.nodecontent {
+    display: inline-block;
+   /* background-color: DarkTurquoise;*/
+    padding: 5px;
+    border-radius: 10px;
+   /*color: white;*/
+}
+
+    .nodecontent:hover {
+        background-color: #ff88007a;
+    }
+
+.nodecontent .collapse {
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 6px);
+    color: #EEEEEE;
+    background-color: #f80;
+    border-radius: 6px;
+    height: 12px;
+    width: 12px;
+    font-size: 12px;
+    text-align: center;
+}
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+} 

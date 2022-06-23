@@ -1,0 +1,233 @@
+/*chart nodes*/
+.orgchart {
+    display: inline-block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+    .orgchart, .orgchart ul {
+        padding: 0;
+        margin: 0;
+    }
+
+        /*align children horizontally using CSS flex*/
+        .orgchart ul {
+            display: flex;
+        }
+
+        /*align nodecontent and children list vertically*/
+        .orgchart li {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /*arrange the nodecontent centered above the children list*/
+        .orgchart .nodecontent {
+            align-self: center;
+            position: relative;
+            margin: 20px 5px;
+            width: 120px;
+            /* border: 1px solid #f80;*/
+            box-shadow: inset 0 0 0 1px #f80;
+            /*padding: 1em 0.75em;*/
+            text-decoration: none;
+            color: #333;
+            background-color: rgba(255,255,255,0.5);
+            font-family: arial, verdana, tahoma;
+            /*font-size: 0.85em;*/
+            font-size: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-transition: all 500ms;
+            -moz-transition: all 500ms;
+            transition: all 500ms;
+            width: 14em;
+        }
+
+        .orgchart .collapsed > ul {
+            display: none;
+        }
+
+        /*connections*/
+        .orgchart li::before,
+        .orgchart .nodecontent::after,
+        .orgchart .nodecontent::before {
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            z-index: -1;
+            border: 0px solid #f80;
+        }
+
+        .orgchart li:not(:only-child)::before {
+            border-top-width: 2px;
+            width: 100%;
+            height: 20px;
+            top: 0px;
+        }
+
+        .orgchart li:first-child::before {
+            width: calc(50% + 1px);
+            right: 0;
+            border-left-width: 2px;
+            border-top-left-radius: 7px;
+        }
+
+        .orgchart li:last-child::before {
+            width: calc(50% + 1px);
+            border-right-width: 2px;
+            border-top-right-radius: 7px;
+        }
+
+        .orgchart .nodecontent::after,
+        .orgchart .nodecontent::before {
+            border-left-width: 2px;
+            width: 2px;
+            height: 20px;
+            left: calc(50% - 1px);
+        }
+
+        .orgchart .nodecontent::before {
+            top: -20px;
+        }
+
+        .orgchart .nodecontent::after {
+            bottom: -20px;
+        }
+
+        .orgchart li:first-child:not(:only-child) > .nodecontent::before,
+        .orgchart li:last-child:not(:only-child) > .nodecontent::before {
+            border-left-width: 0px;
+        }
+
+        .orgchart .leaf > .nodecontent::after,
+        .orgchart .root > .nodecontent::before,
+        .orgchart .collapsed > .nodecontent::after {
+            display: none;
+        }
+
+
+
+/*---777*/
+.label-success {
+    background-color: #72de1952;
+    border-radius: 15px;
+    padding: 2px;
+    text-align: center;
+}
+
+.ui-autocomplete {
+    z-index: 1115 !important;
+}
+
+body {
+    background-color: #333;
+}
+
+table {
+    width: 100%;
+}
+
+.td-left {
+    text-align: left;
+    width: 20%;
+}
+
+.td-right {
+    text-align: center;
+    width: 80%;
+}
+
+.ul-mod {
+     width: 100%;
+    height: 95vh;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    overflow: overlay;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 8rem;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+    .popup .hide {
+        visibility: hidden;
+    }
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.li-point {
+    list-style: none;
+}
+
+a.nounderline:link {
+    text-decoration: none;
+}

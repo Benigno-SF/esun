@@ -1,0 +1,3095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EE5F7D6-B85E-43CF-8024-CC0F79E8AC74}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SFC_WEB_APP</RootNamespace>
+    <AssemblyName>SFC_WEB_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ChoETL, Version=1.2.1.42, Culture=neutral, PublicKeyToken=8138733ed69d3172, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChoETL.1.2.1.42\lib\net45\ChoETL.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.2.10, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.2\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.5\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.5\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.5\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.5\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.5\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.6\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SqlUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="beta.aspx" />
+    <Content Include="Beta2.aspx" />
+    <Content Include="Content\accessibility.js" />
+    <Content Include="Content\app_sources\font-awesome.min.css" />
+    <Content Include="Content\beta.css" />
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\bootstrap-extended.css" />
+    <Content Include="Content\bootstrap-extended.min.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrapPers.css" />
+    <Content Include="Content\bootstrapPers.min.css" />
+    <Content Include="Content\bulma.min.css" />
+    <Content Include="Content\buttons.dataTables.min.css" />
+    <Content Include="Content\buttons.html5.min.js" />
+    <Content Include="Content\Cannon.js" />
+    <Content Include="Content\ColladaLoader.js" />
+    <Content Include="Content\colors.css" />
+    <Content Include="Content\colors.min.css" />
+    <Content Include="Content\components.css" />
+    <Content Include="Content\components.min.css">
+      <DependentUpon>components.css</DependentUpon>
+    </Content>
+    <Content Include="Content\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\dataTables.bulma.min.css" />
+    <Content Include="Content\datatables.css" />
+    <Content Include="Content\datatables.min.css" />
+    <Content Include="Content\dataTables.semanticui.min.css" />
+    <Content Include="Content\DevExtreme\cldr.min.js" />
+    <Content Include="Content\DevExtreme\currency.min.js" />
+    <Content Include="Content\DevExtreme\date.min.js" />
+    <Content Include="Content\DevExtreme\dx.all.js" />
+    <Content Include="Content\DevExtreme\dx.common.css" />
+    <Content Include="Content\DevExtreme\dx.light.css" />
+    <Content Include="Content\DevExtreme\dx.messages.es.js" />
+    <Content Include="Content\DevExtreme\es.js" />
+    <Content Include="Content\DevExtreme\event.min.js" />
+    <Content Include="Content\DevExtreme\globalize.min.js" />
+    <Content Include="Content\DevExtreme\jszip.min.js" />
+    <Content Include="Content\DevExtreme\message.min.js" />
+    <Content Include="Content\DevExtreme\number.min.js" />
+    <Content Include="Content\DevExtreme\print.min.css" />
+    <Content Include="Content\DevExtreme\print.min.js" />
+    <Content Include="Content\DevExtreme\supplemental.js" />
+    <Content Include="Content\DevExtreme\supplemental.min.js" />
+    <Content Include="Content\DevExtreme\unresolved.min.js" />
+    <Content Include="Content\es.js" />
+    <Content Include="Content\export-data.js" />
+    <Content Include="Content\exporting.js" />
+    <Content Include="Content\fa-all.css" />
+    <Content Include="Content\fa-all.min.css">
+      <DependentUpon>fa-all.css</DependentUpon>
+    </Content>
+    <Content Include="Content\fa\fa-brands-400.svg" />
+    <Content Include="Content\fa\fa-regular-400.svg" />
+    <Content Include="Content\fa\fa-solid-900.svg" />
+    <Content Include="Content\file.js" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fa-brands-400.svg" />
+    <Content Include="Content\Fonts\fa-regular-400.svg" />
+    <Content Include="Content\Fonts\fa-solid-900.svg" />
+    <Content Include="Content\Fonts\feather.svg" />
+    <Content Include="Content\feather.css" />
+    <Content Include="Content\feather.min.css">
+      <DependentUpon>feather.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\highcharts.js" />
+    <Content Include="Content\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jquery-ui-1.8.1.custom.css" />
+    <Content Include="Content\jquery-ui-1.8.1.custom.min.js" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.dataTables.min.css" />
+    <Content Include="Content\jquery.zoomooz.min.js" />
+    <Content Include="Content\JQWidgets\images\backgroundTop.png" />
+    <Content Include="Content\JQWidgets\images\backImage.png" />
+    <Content Include="Content\JQWidgets\images\bg_black.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackhover.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackhover_horizontal.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackpressed.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackpressed_horizontal.png" />
+    <Content Include="Content\JQWidgets\images\bg_black_horizontal.png" />
+    <Content Include="Content\JQWidgets\images\bg_blueenergy.png" />
+    <Content Include="Content\JQWidgets\images\bg_darkblue.png" />
+    <Content Include="Content\JQWidgets\images\bg_darkbluehover.png" />
+    <Content Include="Content\JQWidgets\images\bg_darkbluepressed.png" />
+    <Content Include="Content\JQWidgets\images\blackbackground.png" />
+    <Content Include="Content\JQWidgets\images\black_gradient.png" />
+    <Content Include="Content\JQWidgets\images\check_black.png" />
+    <Content Include="Content\JQWidgets\images\check_blue.png" />
+    <Content Include="Content\JQWidgets\images\check_blue_indeterminate.png" />
+    <Content Include="Content\JQWidgets\images\check_disabled.png" />
+    <Content Include="Content\JQWidgets\images\check_indeterminate_black.png" />
+    <Content Include="Content\JQWidgets\images\check_indeterminate_disabled.png" />
+    <Content Include="Content\JQWidgets\images\check_indeterminate_white.png" />
+    <Content Include="Content\JQWidgets\images\check_lightblue.png" />
+    <Content Include="Content\JQWidgets\images\check_lightblue_indeterminate.png" />
+    <Content Include="Content\JQWidgets\images\check_white.png" />
+    <Content Include="Content\JQWidgets\images\close.png" />
+    <Content Include="Content\JQWidgets\images\close_black.png" />
+    <Content Include="Content\JQWidgets\images\close_blue.png" />
+    <Content Include="Content\JQWidgets\images\close_white.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\bar-hue.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\bar-saturation.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\map-hue.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\map-saturation-overlay.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\map-saturation.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\common.png" />
+    <Content Include="Content\JQWidgets\images\crosshair-white.png" />
+    <Content Include="Content\JQWidgets\images\crosshair.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_222222_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkred_gradient.png" />
+    <Content Include="Content\JQWidgets\images\drag.png" />
+    <Content Include="Content\JQWidgets\images\dragcancel.png" />
+    <Content Include="Content\JQWidgets\images\error.png" />
+    <Content Include="Content\JQWidgets\images\filter.png" />
+    <Content Include="Content\JQWidgets\images\html_editor.png" />
+    <Content Include="Content\JQWidgets\images\html_editor_white.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar-light.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar-metro-light.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar-metro-yellow-light.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar.png" />
+    <Content Include="Content\JQWidgets\images\icon-cancel-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-cancel.png" />
+    <Content Include="Content\JQWidgets\images\icon-delete-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-delete.png" />
+    <Content Include="Content\JQWidgets\images\icon-down-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-down-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-down-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-down.png" />
+    <Content Include="Content\JQWidgets\images\icon-edit-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-edit.png" />
+    <Content Include="Content\JQWidgets\images\icon-first-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-first-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-first-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-first.png" />
+    <Content Include="Content\JQWidgets\images\icon-info-small.png" />
+    <Content Include="Content\JQWidgets\images\icon-last-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-last-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-last-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-last.png" />
+    <Content Include="Content\JQWidgets\images\icon-left-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-left-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-left-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-left.png" />
+    <Content Include="Content\JQWidgets\images\icon-menu-minimized-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-menu-minimized.png" />
+    <Content Include="Content\JQWidgets\images\icon-menu-small-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-menu-small.png" />
+    <Content Include="Content\JQWidgets\images\icon-plus-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-plus.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence-exception-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence-exception.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence.png" />
+    <Content Include="Content\JQWidgets\images\icon-right-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-right-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-right-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-right.png" />
+    <Content Include="Content\JQWidgets\images\icon-save-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-save.png" />
+    <Content Include="Content\JQWidgets\images\icon-showpassword-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-showpassword.png" />
+    <Content Include="Content\JQWidgets\images\icon-sort-asc-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-sort-asc.png" />
+    <Content Include="Content\JQWidgets\images\icon-sort-desc-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-sort-desc.png" />
+    <Content Include="Content\JQWidgets\images\icon-sort-remove-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-sort-remove.png" />
+    <Content Include="Content\JQWidgets\images\icon-time-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-time.png" />
+    <Content Include="Content\JQWidgets\images\icon-up-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-up-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-up-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-up.png" />
+    <Content Include="Content\JQWidgets\images\icon_collapse.png" />
+    <Content Include="Content\JQWidgets\images\icon_expand.png" />
+    <Content Include="Content\JQWidgets\images\info.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_4eb305_256x240.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_72b42d_256x240.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\icon-first.png" />
+    <Content Include="Content\JQWidgets\images\lightness\icon-last.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_222222_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\loader-small.gif" />
+    <Content Include="Content\JQWidgets\images\loader.gif" />
+    <Content Include="Content\JQWidgets\images\mail.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-down-white.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-down.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-first-white.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-first.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-last-white.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-last.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-left-white.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-left.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-right-white.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-right.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-up-white.png" />
+    <Content Include="Content\JQWidgets\images\material-icon-up.png" />
+    <Content Include="Content\JQWidgets\images\material_check_black.png" />
+    <Content Include="Content\JQWidgets\images\material_check_white.png" />
+    <Content Include="Content\JQWidgets\images\menubutton.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-down-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-down.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-first-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-first.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-last-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-last.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-left-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-left.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-right - Copy.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-right-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-right.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-up-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-up.png" />
+    <Content Include="Content\JQWidgets\images\multi-arrow.gif" />
+    <Content Include="Content\JQWidgets\images\office-icon-down.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-first.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-last.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-left.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-right.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-up.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_3383bb_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_454545_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_999999_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_fbc856_256x240.png" />
+    <Content Include="Content\JQWidgets\images\pin-black.png" />
+    <Content Include="Content\JQWidgets\images\pin-blue.png" />
+    <Content Include="Content\JQWidgets\images\pin-lightblue.png" />
+    <Content Include="Content\JQWidgets\images\pin-white.png" />
+    <Content Include="Content\JQWidgets\images\pin-yellow.png" />
+    <Content Include="Content\JQWidgets\images\pin.png" />
+    <Content Include="Content\JQWidgets\images\pinned-black.png" />
+    <Content Include="Content\JQWidgets\images\pinned-blue.png" />
+    <Content Include="Content\JQWidgets\images\pinned-lightblue.png" />
+    <Content Include="Content\JQWidgets\images\pinned-white.png" />
+    <Content Include="Content\JQWidgets\images\pinned-yellow.png" />
+    <Content Include="Content\JQWidgets\images\pinned.png" />
+    <Content Include="Content\JQWidgets\images\plus.png" />
+    <Content Include="Content\JQWidgets\images\plus_white.png" />
+    <Content Include="Content\JQWidgets\images\pointer.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_classic.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_darkblue.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_shinyblack.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_summer.png" />
+    <Content Include="Content\JQWidgets\images\redmond\icon-first.png" />
+    <Content Include="Content\JQWidgets\images\redmond\icon-last.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\JQWidgets\images\red_arrow_down.png" />
+    <Content Include="Content\JQWidgets\images\red_arrow_up.png" />
+    <Content Include="Content\JQWidgets\images\red_gradient.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_black.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_disabled.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_indeterminate.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_white.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_classic_hover.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_classic_normal.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_disabled.png" />
+    <Content Include="Content\JQWidgets\images\search.png" />
+    <Content Include="Content\JQWidgets\images\search_white.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_222222_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_454545_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_888888_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sortasc.png" />
+    <Content Include="Content\JQWidgets\images\sortascbutton.png" />
+    <Content Include="Content\JQWidgets\images\sortdesc.png" />
+    <Content Include="Content\JQWidgets\images\sortdescbutton.png" />
+    <Content Include="Content\JQWidgets\images\sortremove.png" />
+    <Content Include="Content\JQWidgets\images\star.png" />
+    <Content Include="Content\JQWidgets\images\start\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\JQWidgets\images\star_disabled.png" />
+    <Content Include="Content\JQWidgets\images\star_hover.png" />
+    <Content Include="Content\JQWidgets\images\success.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_d19405_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_eb990f_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_ffe180_256x240.png" />
+    <Content Include="Content\JQWidgets\images\tick.png" />
+    <Content Include="Content\JQWidgets\images\time.png" />
+    <Content Include="Content\JQWidgets\images\track_classic.png" />
+    <Content Include="Content\JQWidgets\images\track_darkblue.png" />
+    <Content Include="Content\JQWidgets\images\track_shinyblack.png" />
+    <Content Include="Content\JQWidgets\images\track_summer.png" />
+    <Content Include="Content\JQWidgets\images\warning.png" />
+    <Content Include="Content\JQWidgets\images\wp_check_indeterminate_white.png" />
+    <Content Include="Content\JQWidgets\images\wp_check_white.png" />
+    <Content Include="Content\JQWidgets\jqx.android.css" />
+    <Content Include="Content\JQWidgets\jqx.arctic.css" />
+    <Content Include="Content\JQWidgets\jqx.base.css" />
+    <Content Include="Content\JQWidgets\jqx.black.css" />
+    <Content Include="Content\JQWidgets\jqx.blackberry.css" />
+    <Content Include="Content\JQWidgets\jqx.bootstrap.css" />
+    <Content Include="Content\JQWidgets\jqx.classic.css" />
+    <Content Include="Content\JQWidgets\jqx.dark.css" />
+    <Content Include="Content\JQWidgets\jqx.darkblue.css" />
+    <Content Include="Content\JQWidgets\jqx.energyblue.css" />
+    <Content Include="Content\JQWidgets\jqx.flat.css" />
+    <Content Include="Content\JQWidgets\jqx.fresh.css" />
+    <Content Include="Content\JQWidgets\jqx.glacier.css" />
+    <Content Include="Content\JQWidgets\jqx.highcontrast.css" />
+    <Content Include="Content\JQWidgets\jqx.light.css" />
+    <Content Include="Content\JQWidgets\jqx.material-green.css" />
+    <Content Include="Content\JQWidgets\jqx.material-purple.css" />
+    <Content Include="Content\JQWidgets\jqx.material.css" />
+    <Content Include="Content\JQWidgets\jqx.metro.css" />
+    <Content Include="Content\JQWidgets\jqx.metrodark.css" />
+    <Content Include="Content\JQWidgets\jqx.mobile.css" />
+    <Content Include="Content\JQWidgets\jqx.office.css" />
+    <Content Include="Content\JQWidgets\jqx.orange.css" />
+    <Content Include="Content\JQWidgets\jqx.shinyblack.css" />
+    <Content Include="Content\JQWidgets\jqx.summer.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-darkness.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-le-frog.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-lightness.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-overcast.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-redmond.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-smoothness.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-start.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-sunny.css" />
+    <Content Include="Content\JQWidgets\jqx.web.css" />
+    <Content Include="Content\JQWidgets\jqx.windowsphone.css" />
+    <Content Include="Content\KMZLoader.js" />
+    <Content Include="Content\libpdf\canvas.js" />
+    <Content Include="Content\libpdf\from_html.js" />
+    <Content Include="Content\libpdf\html2canvas.js" />
+    <Content Include="Content\libpdf\html2pdf.js" />
+    <Content Include="Content\libpdf\images.js" />
+    <Content Include="Content\libpdf\jspdf.debug.js" />
+    <Content Include="Content\libpdf\jspdf.js" />
+    <Content Include="Content\libpdf\printThis.js" />
+    <Content Include="Content\libpdf\split_text_to_size.js" />
+    <Content Include="Content\libpdf\standard_fonts_metrics.js" />
+    <Content Include="Content\mindmup-editabletable.js" />
+    <Content Include="Content\moment.js" />
+    <Content Include="Content\pace.css" />
+    <Content Include="Content\pace.min.css" />
+    <Content Include="Content\palette-gradient.css" />
+    <Content Include="Content\palette-gradient.min.css">
+      <DependentUpon>palette-gradient.css</DependentUpon>
+    </Content>
+    <Content Include="Content\perfect-scrollbar.css" />
+    <Content Include="Content\perfect-scrollbar.min.css">
+      <DependentUpon>perfect-scrollbar.css</DependentUpon>
+    </Content>
+    <Content Include="Content\planilla\css\bootstrap.min.css" />
+    <Content Include="Content\planilla\css\buttons.dataTables.min.css" />
+    <Content Include="Content\planilla\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\planilla\css\datatables.min.css" />
+    <Content Include="Content\planilla\css\main.css" />
+    <Content Include="Content\planilla\css\select.dataTables.min.css" />
+    <Content Include="Content\planilla\js\bootstrap.min.js" />
+    <Content Include="Content\planilla\js\buttons.html5.min.js" />
+    <Content Include="Content\planilla\js\dataTables.buttons.min.js" />
+    <Content Include="Content\planilla\js\datatables.min.js" />
+    <Content Include="Content\planilla\js\dataTables.select.min.js" />
+    <Content Include="Content\planilla\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\planilla\js\jszip.min.js" />
+    <Content Include="Content\planilla\js\main.js" />
+    <Content Include="Content\planilla\js\pdfmake.min.js" />
+    <Content Include="Content\planilla\js\popper.min.js" />
+    <Content Include="Content\planilla\js\vfs_fonts.js" />
+    <Content Include="Content\print2.css" />
+    <Content Include="Content\RGraph.bar.js" />
+    <Content Include="Content\RGraph.common.core.js" />
+    <Content Include="Content\RGraph.common.dynamic.js" />
+    <Content Include="Content\RGraph.common.effects.js" />
+    <Content Include="Content\RGraph.drawing.yaxis.js" />
+    <Content Include="Content\RGraph.thermometer.js" />
+    <Content Include="Content\ru.js" />
+    <Content Include="Content\semantic.min.css" />
+    <Content Include="Content\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="Content\Three.js" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <Content Include="Content\vertical-menu-modern.css" />
+    <Content Include="Content\vertical-menu-modern.min.css">
+      <DependentUpon>vertical-menu-modern.css</DependentUpon>
+    </Content>
+    <Content Include="Content\wow.min.js" />
+    <Content Include="Content\zoom.js" />
+    <Content Include="default.aspx" />
+    <Content Include="fonts\feather\fonts\feather.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Img\apple-icon-120.png" />
+    <Content Include="Img\avatar.png" />
+    <Content Include="Img\avatar\0Cqmj5ZjUmUKAVJeScGvjCA.jpg" />
+    <Content Include="Img\avatar\0n75noBYWcU2LC0oHF9bNQ.jpg" />
+    <Content Include="Img\avatar\0YSsZmLJ2tkeR9SYk646aWQ.jpg" />
+    <Content Include="Img\avatar\0ZcM5NH0yEu1NcQ1Cd1Q.jpg" />
+    <Content Include="Img\avatar\1077.jpg" />
+    <Content Include="Img\avatar\1129.jpg" />
+    <Content Include="Img\avatar\1455.jpg" />
+    <Content Include="Img\avatar\16.jpg" />
+    <Content Include="Img\avatar\1600.jpg" />
+    <Content Include="Img\avatar\1deNnyabpkWOO7QBojnzYg.jpg" />
+    <Content Include="Img\avatar\1Pn9sjom9EKFMB5twVoHew.jpg" />
+    <Content Include="Img\avatar\32UhE7pbXoEGmKQEy7aC0LA.jpg" />
+    <Content Include="Img\avatar\57.jpg" />
+    <Content Include="Img\avatar\650.jpg" />
+    <Content Include="Img\avatar\8.jpg" />
+    <Content Include="Img\avatar\93Af6jgNSkWeurgXkQE3w.jpg" />
+    <Content Include="Img\avatar\96g7tf0zF09WJtm3Y4BBQ.jpg" />
+    <Content Include="Img\avatar\avatar.png" />
+    <Content Include="Img\bg-2.jpg" />
+    <Content Include="Img\e-sun_bg.png" />
+    <Content Include="Img\e-sun_logo-min.png" />
+    <Content Include="Img\e-sun_logo_l.png" />
+    <Content Include="Img\EspEmbalaje\image183.png" />
+    <Content Include="Img\EspEmbalaje\image184.png" />
+    <Content Include="Img\EspEmbalaje\image185.png" />
+    <Content Include="Img\EspEmbalaje\image186.png" />
+    <Content Include="Img\EspEmbalaje\image187.png" />
+    <Content Include="Img\EspEmbalaje\image188.png" />
+    <Content Include="Img\EspEmbalaje\image189.png" />
+    <Content Include="Img\EspEmbalaje\image190.png" />
+    <Content Include="Img\EspEmbalaje\P2_1.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_2.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_3.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_4.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_5.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_6.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_7.JPG" />
+    <Content Include="Img\EspEmbalaje\P2_8.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_1.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_2.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_3.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_4.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_5.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_6.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_7.JPG" />
+    <Content Include="Img\EspEmbalaje\P3_8.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_1.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_2.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_3.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_4.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_5.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_6.JPG" />
+    <Content Include="Img\EspEmbalaje\P4_7.JPG" />
+    <Content Include="Img\favicon.ico" />
+    <Content Include="Img\firma_calidad.png" />
+    <Content Include="Img\icon.png" />
+    <Content Include="Img\img_plu_small.png" />
+    <Content Include="Img\loaddata.png" />
+    <Content Include="Img\loading.gif" />
+    <Content Include="Img\loading2.gif" />
+    <Content Include="Img\loading3.gif" />
+    <Content Include="Img\loadingg.gif" />
+    <Content Include="Img\load_map.gif" />
+    <Content Include="Img\lupa.gif" />
+    <Content Include="Img\lupaa.gif" />
+    <Content Include="Img\lupx.gif" />
+    <Content Include="Img\Productores\1.png" />
+    <Content Include="Img\Productores\360.png" />
+    <Content Include="Img\Productores\370.png" />
+    <Content Include="Img\Productores\530.png" />
+    <Content Include="Img\rfquimico.png" />
+    <Content Include="Img\sendficha.gif" />
+    <Content Include="Img\sf-logo.png" />
+    <Content Include="Img\sonido.wav" />
+    <Content Include="Img\stack-logo.png" />
+    <Content Include="Img\sunfruitsgif.gif" />
+    <Content Include="Img\sunfruits_small.gif" />
+    <Content Include="Img\ti.png" />
+    <Content Include="login.aspx" />
+    <Content Include="Mod_Admi\Wfo_CostosDistribuidos.aspx" />
+    <Content Include="Mod_Admi\Wfo_ReporteVentas.aspx" />
+    <Content Include="Mod_Admi\Wfo_Saldoporcobrar.aspx" />
+    <Content Include="Mod_Agro\Wfo_CreateGuiaRemision.aspx" />
+    <Content Include="Mod_Agro\Wfo_PrintGuia.aspx" />
+    <Content Include="Mod_Agro\Wfo_Propiedades.aspx" />
+    <Content Include="Mod_Agro\Wfo_Reg_Chofe_Placas.aspx" />
+    <Content Include="Mod_Agro\Wfo_Reg_Sup_Evaluador.aspx" />
+    <Content Include="Mod_Agro\Wfo_RepCalPda.aspx" />
+    <Content Include="Mod_Agro\Wfo_SyncRV_Aplicaciones.aspx" />
+    <Content Include="Mod_Agro\Wfo_Tareo.aspx" />
+    <Content Include="Mod_Agro\Wfo_Tareo2.aspx" />
+    <Content Include="Mod_Agro\Wfo_TareoCampo.aspx" />
+    <Content Include="Mod_Agro\Wfo_TrazabilidadExportacion.aspx" />
+    <Content Include="Mod_Agro\Wfo_TranferenciaGuias.aspx" />
+    <Content Include="Mod_Agro\Wfo_ViewMapLotes.aspx" />
+    <Content Include="Mod_Agro\Wfo_ReportePiscina.aspx" />
+    <Content Include="Mod_Agro\Wfo_ReportePiscinaK.aspx" />
+    <Content Include="Mod_Agro\Wfo_SyncRaptorView.aspx" />
+    <Content Include="Mod_Agro\Wfo_ViewMapLotesLegal.aspx" />
+    <Content Include="Mod_App\img\add-campana.gif" />
+    <Content Include="Mod_App\img\add-img.gif" />
+    <Content Include="Mod_App\img\add-labor.gif" />
+    <Content Include="Mod_App\img\add-year.gif" />
+    <Content Include="Mod_App\Login.asmx" />
+    <Content Include="Mod_App\lupx.gif" />
+    <Content Include="Mod_App\Subir.aspx" />
+    <Content Include="Mod_App\Wfo_AsistenciaRegi.aspx" />
+    <Content Include="Mod_App\Wfo_Comparaciontickets.aspx" />
+    <Content Include="Mod_App\Wfo_ConsultaRendimiento.aspx" />
+    <Content Include="Mod_App\Wfo_EspEmbalaje.aspx" />
+    <Content Include="Mod_App\Wfo_GasificadoReporte_PaletsPorTunel.aspx" />
+    <Content Include="Mod_App\Wfo_LecturaPacking.aspx" />
+    <Content Include="Mod_App\Wfo_MoniDetaRedimiento.aspx" />
+    <Content Include="Mod_App\Wfo_MonitoreoDispositivos.aspx" />
+    <Content Include="Mod_App\Wfo_MonitorServer.aspx" />
+    <Content Include="Mod_App\Wfo_NuevaClave.aspx" />
+    <Content Include="Mod_App\Wfo_Olvide.aspx" />
+    <Content Include="Mod_App\Wfo_Parteproduccion.aspx" />
+    <Content Include="Mod_App\Wfo_Presentacion.aspx" />
+    <Content Include="Mod_App\Wfo_PruebaUtilidades.aspx" />
+    <Content Include="Mod_App\Wfo_RendimientoLineas.aspx" />
+    <Content Include="Mod_App\Wfo_RepView.aspx" />
+    <Content Include="Mod_App\Wfo_Tiemporecepcion.aspx" />
+    <Content Include="Mod_App\Wfo_Tiemporecepcion_Actualizar.aspx" />
+    <Content Include="Mod_Cali\Wfo_CertificadoCalidadPoda.aspx" />
+    <Content Include="Mod_Cali\Wfo_CertificadoCalidad.aspx" />
+    <Content Include="Mod_Cali\Wfo_CertificadoCalidadAmarre.aspx" />
+    <Content Include="Mod_Cali\WfoRepPalta.aspx" />
+    <Content Include="Mod_Cali\Wfo_RepCaEst.aspx" />
+    <Content Include="Mod_Cali\Wfo_RepCalidad.aspx" />
+    <Content Include="Mod_Cali\Wfo_RepGeneralCalidad.aspx" />
+    <Content Include="Mod_Cmx\Wfo_ActualizaGuiaCliente.aspx" />
+    <Content Include="Mod_Conta\Wfo_InventarioAlmacenes.aspx" />
+    <Content Include="Mod_CPF\Wfo_ExportCpf.aspx" />
+    <Content Include="Mod_Frio\Wfo_ConFrio.aspx" />
+    <Content Include="Mod_Frio\Wfo_FrioTHD.aspx" />
+    <Content Include="Mod_Logi\Wfo_AprobReqNIS2.aspx" />
+    <Content Include="Mod_Logi\Wfo_AprobRequNis.aspx" />
+    <Content Include="Mod_Logi\Wfo_RegiLifeTime.aspx" />
+    <Content Include="Mod_Logi\Wfo_ReporteAnalisisCompras.aspx" />
+    <Content Include="Mod_Logi\Wfo_RestablecerPedidos.aspx" />
+    <Content Include="Mod_Logi\Wfo_TrazabilidadRequerimiento.aspx" />
+    <Content Include="Mod_Admi\Wfo_RepoReparacionesAdm.aspx" />
+    <Content Include="Mod_Maes\Wfo_RepoReparaciones.aspx" />
+    <Content Include="Mod_Maes\Wfo_Table_Evento.aspx" />
+    <Content Include="Mod_Pres\Wfo_ConfProd.aspx" />
+    <Content Include="Mod_Pres\Wfo_PresMen.aspx" />
+    <Content Include="Mod_Prod\Wfo_AnularEtiquetas.aspx" />
+    <Content Include="Mod_Prod\Wfo_ParadasProceso.aspx" />
+    <Content Include="Mod_Prod\Wfo_RegistroPersonal.aspx" />
+    <Content Include="Mod_Prod\Wfo_AvancePersonal.aspx" />
+    <Content Include="Mod_Prod\Wfo_AvanceProduccion.aspx" />
+    <Content Include="Mod_Prod\Wfo_ComparativoCampania.aspx" />
+    <Content Include="Mod_Prod\Wfo_DetalleProceso.aspx" />
+    <Content Include="Mod_Prod\Wfo_EspEmbalajeCrud.aspx" />
+    <Content Include="Mod_Prod\Wfo_IRUsuario.aspx" />
+    <Content Include="Mod_Admi\Wfo_ReporteCostosDistribuidos.aspx" />
+    <Content Include="Mod_Prod\Wfo_ReadLineas2.aspx" />
+    <Content Include="Mod_Prod\Wfo_RepPesoPaleta.aspx" />
+    <Content Include="Mod_Prod\Wfo_SyncRendimiento_Nisira.aspx" />
+    <Content Include="Mod_Prod\Wfo_VolcadoProceso.aspx" />
+    <Content Include="Mod_Recep\Wfo_Gasificado.aspx" />
+    <Content Include="Mod_Admi\Wfo_ControlProyectosAnaliticos.aspx" />
+    <Content Include="Mod_Admi\Wfo_Costeo.aspx" />
+    <Content Include="Mod_Admi\Wfo_CosteoMOSemanal.aspx" />
+    <Content Include="Mod_Admi\Wfo_GastosPorCC.aspx" />
+    <Content Include="Mod_Admi\Wfo_InventarioAlmacen.aspx" />
+    <Content Include="Mod_Admi\Wfo_Organigrama.aspx" />
+    <Content Include="Mod_Admi\Wfo_Archivos.aspx" />
+    <Content Include="Mod_Admi\Wfo_ReporteGerencialCostos.aspx" />
+    <Content Include="Mod_Admi\Wfo_RepPakingListFact.aspx" />
+    <Content Include="Mod_Admi\Wfo_RevisionProcesos.aspx" />
+    <Content Include="Mod_Agro\Wfo_InfPartCampActSimple.aspx" />
+    <Content Include="Mod_Agro\Wfo_PropiedadesMaps.aspx" />
+    <Content Include="Mod_Agro\Wfo_Track.aspx" />
+    <Content Include="Mod_Agro\Wfo_TrackView.aspx" />
+    <Content Include="Mod_Alm\Wfo_InfReqConsumo.aspx" />
+    <Content Include="Mod_App\custom-file.js" />
+    <Content Include="Mod_App\SerApp.asmx" />
+    <Content Include="Mod_App\SerReports.asmx" />
+    <Content Include="Mod_App\Wfo_Asistencia.aspx" />
+    <Content Include="Mod_App\Wfo_ConsultaUtilidad.aspx" />
+    <Content Include="Mod_App\Wfo_FichaSC19.aspx" />
+    <Content Include="Mod_App\Wfo_GetPost.aspx" />
+    <Content Include="Mod_App\Wfo_Inscripcion_Personal.aspx" />
+    <Content Include="Mod_App\Wfo_MoniAbastecimiento.aspx" />
+    <Content Include="Mod_App\Wfo_MoniProceso.aspx" />
+    <Content Include="Mod_App\Wfo_MoniIngresoCamionesMP.aspx" />
+    <Content Include="Mod_App\Wfo_MoniRend.aspx" />
+    <Content Include="Mod_App\Wfo_MoniRendimiento.aspx" />
+    <Content Include="Mod_App\Wfo_MoniLine.aspx" />
+    <Content Include="Mod_App\Wfo_MonitorComedor.aspx" />
+    <Content Include="Mod_App\Wfo_test.aspx" />
+    <Content Include="Mod_App\Wfo_TicketRegi.aspx" />
+    <Content Include="Mod_App\Wfo_TicketRendimiento.aspx" />
+    <Content Include="Mod_App\Wfo_UploadFile.aspx" />
+    <Content Include="Mod_Cali\Wfo_ContrList-Edit.aspx" />
+    <Content Include="Mod_Cali\Wfo_ContrList.aspx" />
+    <Content Include="Mod_Cali\Wfo_ContrParam.aspx" />
+    <Content Include="Mod_Cmx\Wfo_InstruccionEmbarque.aspx" />
+    <Content Include="Mod_Cmx\Wfo_OrdenEmbarque.aspx" />
+    <Content Include="Mod_Cmx\Wfo_OrdenEmbarque_Edit.aspx" />
+    <Content Include="Mod_Extr\Wfo_ProvMP.aspx" />
+    <Content Include="Mod_Frio\Wfo_OrdCarga-Edit.aspx" />
+    <Content Include="Mod_Frio\Wfo_OrdCarga.aspx" />
+    <Content Include="Mod_Frio\Wfo_PaleUbic.aspx" />
+    <Content Include="Mod_Hisp\Wfo_LogSincronizacionNH.aspx" />
+    <Content Include="Mod_Hisp\Wfo_Transferencia.aspx" />
+    <Content Include="Mod_Logi\Wfo_AprobRequ.aspx" />
+    <Content Include="Mod_Logi\Wfo_ReqvsExistencia.aspx" />
+    <Content Include="Mod_Pres\Wfo_PresIndirecto-Edit.aspx" />
+    <Content Include="Mod_Pres\Wfo_PresIndirecto.aspx" />
+    <Content Include="Mod_Pres\Wfo_PresMaster-Repo.aspx" />
+    <Content Include="Mod_Pres\Wfo_PresMaster.aspx" />
+    <Content Include="Mod_Pres\Wfo_UnidNegocio-Edit.aspx" />
+    <Content Include="Mod_Pres\Wfo_UnidNegocio-Repo.aspx" />
+    <Content Include="Mod_Pres\Wfo_UnidNegocio.aspx" />
+    <Content Include="Mod_Prod\Wfo_ActualizaPesoPalet.aspx" />
+    <Content Include="Mod_Prod\Wfo_AssigPersonal.aspx" />
+    <Content Include="Mod_Prod\Wfo_ComparacionCapania.aspx" />
+    <Content Include="Mod_Prod\Wfo_HorasEfectivas.aspx" />
+    <Content Include="Mod_Prod\Wfo_InfoLine.aspx" />
+    <Content Include="Mod_Prod\Wfo_InformeParteTransformacion.aspx" />
+    <Content Include="Mod_Prod\Wfo_ParteTransf.aspx" />
+    <Content Include="Mod_Prod\Wfo_Proceso.aspx" />
+    <Content Include="Mod_Prod\Wfo_ReadLineas.aspx" />
+    <Content Include="Mod_Prod\Wfo_ReadLineas_Xlotes.aspx" />
+    <Content Include="Mod_Prod\Wfo_RecepcionMP.aspx" />
+    <Content Include="Mod_Prod\Wfo_ReporteRendimiento.aspx" />
+    <Content Include="Mod_Prod\Wfo_Reporte_TR.aspx" />
+    <Content Include="Mod_Prod\Wfo_vsProyectado.aspx" />
+    <Content Include="Mod_Recep\Wfo_GasificadoReporte.aspx" />
+    <Content Include="Mod_Recep\Wfo_GasificadoReporte_PaletsPorTunel.aspx" />
+    <Content Include="Mod_RepoBI\Wfo_RendimientoP.aspx" />
+    <Content Include="Mod_Repo\Wfo_ReporteStock.aspx" />
+    <Content Include="Mod_Repo\Wfo_RepoView.aspx" />
+    <Content Include="Mod_RRHH\assets\bootstrap.css" />
+    <Content Include="Mod_RRHH\assets\bootstrap.min.css" />
+    <Content Include="Mod_RRHH\assets\bootstrap.min.js" />
+    <Content Include="Mod_RRHH\assets\croppie.min.css" />
+    <Content Include="Mod_RRHH\assets\croppie.min.js" />
+    <Content Include="Mod_RRHH\assets\css.css" />
+    <Content Include="Mod_RRHH\assets\font-awesome.min.css" />
+    <Content Include="Mod_RRHH\assets\home.css" />
+    <Content Include="Mod_RRHH\assets\jquery.min.js" />
+    <Content Include="Mod_RRHH\assets\simple-line-icons.css" />
+    <Content Include="Mod_RRHH\assets\style.css" />
+    <Content Include="Mod_RRHH\DocPersonal\default.aspx" />
+    <Content Include="Mod_RRHH\ImgPersonal\default.aspx" />
+    <Content Include="Mod_RRHH\InformeTareaCampo.aspx" />
+    <Content Include="Mod_RRHH\Wfo_ActualizarFoto.aspx" />
+    <Content Include="Mod_RRHH\Wfo_AsistenciaJefatura.aspx" />
+    <Content Include="Mod_RRHH\Wfo_EnvioInfMasiva.aspx" />
+    <Content Include="Mod_RRHH\Wfo_FichaCovid19.aspx" />
+    <Content Include="Mod_RRHH\Wfo_HisSalidasIngresos.aspx" />
+    <Content Include="Mod_RRHH\Wfo_ImpCapacitaciones.aspx" />
+    <Content Include="Mod_RRHH\Wfo_InformeParteCampo.aspx" />
+    <Content Include="Mod_RRHH\Wfo_InformeTareaCampo.aspx" />
+    <Content Include="Mod_RRHH\Wfo_Planilla.aspx" />
+    <Content Include="Mod_RRHH\Wfo_PreInscripcionPersonal.aspx" />
+    <Content Include="Mod_RRHH\Wfo_RepoHorasActividad.aspx" />
+    <Content Include="Mod_RRHH\Wfo_RRHHExc.aspx" />
+    <Content Include="Mod_RRHH\Wfo_SyncTareo.aspx" />
+    <Content Include="Mod_RRHH\Wfo_TareoAdicional.aspx" />
+    <Content Include="Mod_RRHH\Wfo_ViewAsistencia.aspx" />
+    <Content Include="Mod_RRHH\Wfo_BoletaRep.aspx" />
+    <Content Include="Mod_RRHH\Wfo_ComedorRepo.aspx" />
+    <Content Include="Mod_RRHH\Wfo_HorComedor.aspx" />
+    <Content Include="Content\Fonts\feather.eot" />
+    <Content Include="Content\Fonts\feather.ttf" />
+    <Content Include="Content\Fonts\feather.woff" />
+    <Content Include="Content\Fonts\fa-brands-400.eot" />
+    <Content Include="Content\Fonts\fa-brands-400.ttf" />
+    <Content Include="Content\Fonts\fa-brands-400.woff" />
+    <Content Include="Content\Fonts\fa-brands-400.woff2" />
+    <Content Include="Content\Fonts\fa-regular-400.eot" />
+    <Content Include="Content\Fonts\fa-regular-400.ttf" />
+    <Content Include="Content\Fonts\fa-regular-400.woff" />
+    <Content Include="Content\Fonts\fa-regular-400.woff2" />
+    <Content Include="Content\Fonts\fa-solid-900.eot" />
+    <Content Include="Content\Fonts\fa-solid-900.ttf" />
+    <Content Include="Content\Fonts\fa-solid-900.woff" />
+    <Content Include="Content\Fonts\fa-solid-900.woff2" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Mod_RRHH\Wfo_SendSms.aspx" />
+    <Content Include="Mod_RRHH\Wfo_VerificaPersonal.aspx" />
+    <Content Include="Mod_RRHH\Wfo_VerificarImagen.aspx" />
+    <Content Include="Mod_Segu\Wfo_Incidencias.aspx" />
+    <Content Include="Mod_Sis\Wfo_CambiarPsw.aspx" />
+    <Content Include="Mod_Sis\Wfo_ClienteProd.aspx" />
+    <Content Include="Mod_Sis\Wfo_Cuenta.aspx" />
+    <Content Include="Mod_Sis\Wfo_SeleccionarEmpresa.aspx" />
+    <Content Include="Mod_TI\img\add-campana.gif" />
+    <Content Include="Mod_TI\img\add-img.gif" />
+    <Content Include="Mod_TI\img\add-labor.gif" />
+    <Content Include="Mod_TI\img\add-year.gif" />
+    <Content Include="Mod_TI\Wfo_ConfigDispositivos.aspx" />
+    <Content Include="Mod_TI\Wfo_FrioUPD.aspx" />
+    <Content Include="Mod_TI\Wfo_Inventario.aspx" />
+    <Content Include="Mod_Frio\Wfo_KdxPaleta.aspx" />
+    <Content Include="Mod_Usr\Wfo_Mantenimiento.aspx" />
+    <Content Include="Scripts\croppie\bootstrap.min.js" />
+    <Content Include="Scripts\croppie\croppie.min.css" />
+    <Content Include="Scripts\croppie\croppie.min.js" />
+    <Content Include="Scripts\datatables.js" />
+    <Content Include="Scripts\datatables.min.js">
+      <DependentUpon>datatables.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\dt\buttons.bootstrap4.min.css" />
+    <Content Include="Scripts\dt\buttons.bootstrap4.min.js" />
+    <Content Include="Scripts\dt\buttons.dataTables.min.css" />
+    <Content Include="Scripts\dt\buttons.html5.min.js" />
+    <Content Include="Scripts\dt\dataTables.buttons.min.js" />
+    <Content Include="Scripts\dt\datatables.min.css" />
+    <Content Include="Scripts\dt\datatables.min.js" />
+    <Content Include="Scripts\dt\vendors.min.css" />
+    <Content Include="Scripts\dt\vfs_fonts.js" />
+    <Content Include="Scripts\FunctionEsun.js" />
+    <Content Include="Scripts\Inputmask\dist\bindings\inputmask.binding.js" />
+    <Content Include="Scripts\Inputmask\dist\inputmask.js" />
+    <Content Include="Scripts\Inputmask\dist\inputmask.min.js" />
+    <Content Include="Scripts\Inputmask\dist\jquery.inputmask.js" />
+    <Content Include="Scripts\Inputmask\dist\jquery.inputmask.min.js" />
+    <Content Include="Scripts\JsBarcode.code128.min.js" />
+    <Content Include="Scripts\locale\af.js" />
+    <Content Include="Scripts\locale\ar-dz.js" />
+    <Content Include="Scripts\locale\ar-kw.js" />
+    <Content Include="Scripts\locale\ar-ly.js" />
+    <Content Include="Scripts\locale\ar-ma.js" />
+    <Content Include="Scripts\locale\ar-sa.js" />
+    <Content Include="Scripts\locale\ar-tn.js" />
+    <Content Include="Scripts\locale\ar.js" />
+    <Content Include="Scripts\locale\az.js" />
+    <Content Include="Scripts\locale\be.js" />
+    <Content Include="Scripts\locale\bg.js" />
+    <Content Include="Scripts\locale\bm.js" />
+    <Content Include="Scripts\locale\bn.js" />
+    <Content Include="Scripts\locale\bo.js" />
+    <Content Include="Scripts\locale\br.js" />
+    <Content Include="Scripts\locale\bs.js" />
+    <Content Include="Scripts\locale\ca.js" />
+    <Content Include="Scripts\locale\cs.js" />
+    <Content Include="Scripts\locale\cv.js" />
+    <Content Include="Scripts\locale\cy.js" />
+    <Content Include="Scripts\locale\da.js" />
+    <Content Include="Scripts\locale\de-at.js" />
+    <Content Include="Scripts\locale\de-ch.js" />
+    <Content Include="Scripts\locale\de.js" />
+    <Content Include="Scripts\locale\dv.js" />
+    <Content Include="Scripts\locale\el.js" />
+    <Content Include="Scripts\locale\en-au.js" />
+    <Content Include="Scripts\locale\en-ca.js" />
+    <Content Include="Scripts\locale\en-gb.js" />
+    <Content Include="Scripts\locale\en-ie.js" />
+    <Content Include="Scripts\locale\en-il.js" />
+    <Content Include="Scripts\locale\en-in.js" />
+    <Content Include="Scripts\locale\en-nz.js" />
+    <Content Include="Scripts\locale\en-sg.js" />
+    <Content Include="Scripts\locale\eo.js" />
+    <Content Include="Scripts\locale\es-do.js" />
+    <Content Include="Scripts\locale\es-us.js" />
+    <Content Include="Scripts\locale\es.js" />
+    <Content Include="Scripts\locale\et.js" />
+    <Content Include="Scripts\locale\eu.js" />
+    <Content Include="Scripts\locale\fa.js" />
+    <Content Include="Scripts\locale\fi.js" />
+    <Content Include="Scripts\locale\fil.js" />
+    <Content Include="Scripts\locale\fo.js" />
+    <Content Include="Scripts\locale\fr-ca.js" />
+    <Content Include="Scripts\locale\fr-ch.js" />
+    <Content Include="Scripts\locale\fr.js" />
+    <Content Include="Scripts\locale\fy.js" />
+    <Content Include="Scripts\locale\ga.js" />
+    <Content Include="Scripts\locale\gd.js" />
+    <Content Include="Scripts\locale\gl.js" />
+    <Content Include="Scripts\locale\gom-deva.js" />
+    <Content Include="Scripts\locale\gom-latn.js" />
+    <Content Include="Scripts\locale\gu.js" />
+    <Content Include="Scripts\locale\he.js" />
+    <Content Include="Scripts\locale\hi.js" />
+    <Content Include="Scripts\locale\hr.js" />
+    <Content Include="Scripts\locale\hu.js" />
+    <Content Include="Scripts\locale\hy-am.js" />
+    <Content Include="Scripts\locale\id.js" />
+    <Content Include="Scripts\locale\is.js" />
+    <Content Include="Scripts\locale\it-ch.js" />
+    <Content Include="Scripts\locale\it.js" />
+    <Content Include="Scripts\locale\ja.js" />
+    <Content Include="Scripts\locale\jv.js" />
+    <Content Include="Scripts\locale\ka.js" />
+    <Content Include="Scripts\locale\kk.js" />
+    <Content Include="Scripts\locale\km.js" />
+    <Content Include="Scripts\locale\kn.js" />
+    <Content Include="Scripts\locale\ko.js" />
+    <Content Include="Scripts\locale\ku.js" />
+    <Content Include="Scripts\locale\ky.js" />
+    <Content Include="Scripts\locale\lb.js" />
+    <Content Include="Scripts\locale\lo.js" />
+    <Content Include="Scripts\locale\lt.js" />
+    <Content Include="Scripts\locale\lv.js" />
+    <Content Include="Scripts\locale\me.js" />
+    <Content Include="Scripts\locale\mi.js" />
+    <Content Include="Scripts\locale\mk.js" />
+    <Content Include="Scripts\locale\ml.js" />
+    <Content Include="Scripts\locale\mn.js" />
+    <Content Include="Scripts\locale\mr.js" />
+    <Content Include="Scripts\locale\ms-my.js" />
+    <Content Include="Scripts\locale\ms.js" />
+    <Content Include="Scripts\locale\mt.js" />
+    <Content Include="Scripts\locale\my.js" />
+    <Content Include="Scripts\locale\nb.js" />
+    <Content Include="Scripts\locale\ne.js" />
+    <Content Include="Scripts\locale\nl-be.js" />
+    <Content Include="Scripts\locale\nl.js" />
+    <Content Include="Scripts\locale\nn.js" />
+    <Content Include="Scripts\locale\oc-lnc.js" />
+    <Content Include="Scripts\locale\pa-in.js" />
+    <Content Include="Scripts\locale\pl.js" />
+    <Content Include="Scripts\locale\pt-br.js" />
+    <Content Include="Scripts\locale\pt.js" />
+    <Content Include="Scripts\locale\ro.js" />
+    <Content Include="Scripts\locale\ru.js" />
+    <Content Include="Scripts\locale\sd.js" />
+    <Content Include="Scripts\locale\se.js" />
+    <Content Include="Scripts\locale\si.js" />
+    <Content Include="Scripts\locale\sk.js" />
+    <Content Include="Scripts\locale\sl.js" />
+    <Content Include="Scripts\locale\sq.js" />
+    <Content Include="Scripts\locale\sr-cyrl.js" />
+    <Content Include="Scripts\locale\sr.js" />
+    <Content Include="Scripts\locale\ss.js" />
+    <Content Include="Scripts\locale\sv.js" />
+    <Content Include="Scripts\locale\sw.js" />
+    <Content Include="Scripts\locale\ta.js" />
+    <Content Include="Scripts\locale\te.js" />
+    <Content Include="Scripts\locale\tet.js" />
+    <Content Include="Scripts\locale\tg.js" />
+    <Content Include="Scripts\locale\th.js" />
+    <Content Include="Scripts\locale\tk.js" />
+    <Content Include="Scripts\locale\tl-ph.js" />
+    <Content Include="Scripts\locale\tlh.js" />
+    <Content Include="Scripts\locale\tr.js" />
+    <Content Include="Scripts\locale\tzl.js" />
+    <Content Include="Scripts\locale\tzm-latn.js" />
+    <Content Include="Scripts\locale\tzm.js" />
+    <Content Include="Scripts\locale\ug-cn.js" />
+    <Content Include="Scripts\locale\uk.js" />
+    <Content Include="Scripts\locale\ur.js" />
+    <Content Include="Scripts\locale\uz-latn.js" />
+    <Content Include="Scripts\locale\uz.js" />
+    <Content Include="Scripts\locale\vi.js" />
+    <Content Include="Scripts\locale\x-pseudo.js" />
+    <Content Include="Scripts\locale\yo.js" />
+    <Content Include="Scripts\locale\zh-cn.js" />
+    <Content Include="Scripts\locale\zh-hk.js" />
+    <Content Include="Scripts\locale\zh-mo.js" />
+    <Content Include="Scripts\locale\zh-tw.js" />
+    <Content Include="Scripts\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment_Ult.js" />
+    <Content Include="Scripts\org\orgchart-vertical.css" />
+    <Content Include="Scripts\org\orgchart.css" />
+    <Content Include="Scripts\org\simple.css" />
+    <Content Include="Scripts\sweetalert2.js" />
+    <Content Include="Scripts\sweetalert2.min.js">
+      <DependentUpon>sweetalert2.js</DependentUpon>
+    </Content>
+    <Content Include="SerAdmi.asmx" />
+    <Content Include="SerAlm.asmx" />
+    <Content Include="SerCal.asmx" />
+    <Content Include="SerCertCalidad.asmx" />
+    <Content Include="SerComex.asmx" />
+    <Content Include="SerConta.asmx" />
+    <Content Include="SerCPF.asmx" />
+    <Content Include="SerExtr.asmx" />
+    <Content Include="SerFrio.asmx" />
+    <Content Include="SerLogi.asmx" />
+    <Content Include="SerMaes.asmx" />
+    <Content Include="SerPlanilla.asmx" />
+    <Content Include="SerRecep.asmx" />
+    <Content Include="SerSis.asmx" />
+    <Content Include="SerTareo.asmx" />
+    <Content Include="SerTI.asmx" />
+    <Content Include="SerTransf.asmx" />
+    <Content Include="SER_Reg_Chofe_Placas.asmx" />
+    <Content Include="SER_Reg_Sup_Evaluador.asmx" />
+    <Content Include="Site.Master" />
+    <Content Include="WebService1.asmx" />
+    <Content Include="wfo.aspx" />
+    <None Include="bundleconfig.json" />
+    <Content Include="Mod_RRHH\Wfo_TicketComedor.aspx" />
+    <Content Include="Mod_Segu\Wfo_IngresoVehiculos.aspx" />
+    <Content Include="Mod_Segu\Wfo_RecepDocs.aspx" />
+    <Content Include="Scripts\app-menu.js" />
+    <Content Include="Scripts\app-menu.min.js">
+      <DependentUpon>app-menu.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\app.min.js">
+      <DependentUpon>app.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\blockUI.min.js">
+      <DependentUpon>blockUI.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js">
+      <DependentUpon>bootstrap-datetimepicker.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js">
+      <DependentUpon>bootstrap.bundle.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\hammer.min.js">
+      <DependentUpon>hammer.js</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\fa\fa-brands-400.eot" />
+    <Content Include="Content\fa\fa-brands-400.ttf" />
+    <Content Include="Content\fa\fa-brands-400.woff" />
+    <Content Include="Content\fa\fa-brands-400.woff2" />
+    <Content Include="Content\fa\fa-regular-400.eot" />
+    <Content Include="Content\fa\fa-regular-400.ttf" />
+    <Content Include="Content\fa\fa-regular-400.woff" />
+    <Content Include="Content\fa\fa-regular-400.woff2" />
+    <Content Include="Content\fa\fa-solid-900.eot" />
+    <Content Include="Content\fa\fa-solid-900.ttf" />
+    <Content Include="Content\fa\fa-solid-900.woff" />
+    <Content Include="Content\fa\fa-solid-900.woff2" />
+    <Content Include="fonts\feather\fonts\feather.eot" />
+    <Content Include="fonts\feather\fonts\feather.ttf" />
+    <Content Include="fonts\feather\fonts\feather.woff" />
+    <Content Include="Content\DevExtreme\icons\dxicons.ttf" />
+    <Content Include="Content\DevExtreme\icons\dxicons.woff" />
+    <Content Include="Content\DevExtreme\icons\dxicons.woff2" />
+    <Content Include="Img\pda.apk" />
+    <Content Include="Mod_RRHH\assets\fontawesome-webfont.woff2" />
+    <Content Include="Mod_App\pdf\archivo.pdf" />
+    <Content Include="Mod_RRHH\DocPersonal\11718.docx" />
+    <Content Include="formatos\PR001.xlsm" />
+    <Content Include="formatos\PR002.xlsm" />
+    <Content Include="formatos\PR003.xlsm" />
+    <Content Include="formatos\PR004.xlsm" />
+    <Content Include="formatos\PR005.xlsm" />
+    <Content Include="formatos\PR007.xlsm" />
+    <Content Include="formatos\Temp\TmpGenera\tempPR001.xlsm" />
+    <None Include="Properties\PublishProfiles\Beta - Elmer.pubxml" />
+    <None Include="Properties\PublishProfiles\Beta-Elmer.pubxml" />
+    <None Include="Properties\PublishProfiles\Beta.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\hammer.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js">
+      <DependentUpon>jquery-3.3.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js">
+      <DependentUpon>jquery-3.3.1.slim.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\blockUI.js" />
+    <Content Include="Scripts\jquery-pers.min.js">
+      <DependentUpon>jquery-pers.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-pers.js" />
+    <Content Include="Scripts\jquery-sliding-menu.js" />
+    <Content Include="Scripts\jquery.matchHeight.min.js">
+      <DependentUpon>jquery.matchHeight.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.matchHeight.js" />
+    <Content Include="Scripts\jquery-sliding-menu.min.js">
+      <DependentUpon>jquery-sliding-menu.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.cs-CZ.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.de-DE.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.en-CA.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.en-US.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.fr-FR.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.he-IL.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.hr-HR.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.hu-HU.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.it-IT.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.ja-JP.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.lt.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.ru-RU.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.culture.sa-IN.js" />
+    <Content Include="Scripts\JQWidgets\globalization\globalize.js" />
+    <Content Include="Scripts\JQWidgets\globalization\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\jqx-all.js" />
+    <Content Include="Scripts\JQWidgets\jqxangular.js" />
+    <Content Include="Scripts\JQWidgets\jqxbargauge.js" />
+    <Content Include="Scripts\JQWidgets\jqxbulletchart.js" />
+    <Content Include="Scripts\JQWidgets\jqxbuttongroup.js" />
+    <Content Include="Scripts\JQWidgets\jqxbuttons.js" />
+    <Content Include="Scripts\JQWidgets\jqxcalendar.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.annotations.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.api.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.core.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.rangeselector.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.waterfall.js" />
+    <Content Include="Scripts\JQWidgets\jqxcheckbox.js" />
+    <Content Include="Scripts\JQWidgets\jqxcolorpicker.js" />
+    <Content Include="Scripts\JQWidgets\jqxcombobox.js" />
+    <Content Include="Scripts\JQWidgets\jqxcomplexinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxcore.elements.js" />
+    <Content Include="Scripts\JQWidgets\jqxcore.js" />
+    <Content Include="Scripts\JQWidgets\jqxdata.export.js" />
+    <Content Include="Scripts\JQWidgets\jqxdata.js" />
+    <Content Include="Scripts\JQWidgets\jqxdatatable.js" />
+    <Content Include="Scripts\JQWidgets\jqxdate.js" />
+    <Content Include="Scripts\JQWidgets\jqxdatetimeinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxdocking.js" />
+    <Content Include="Scripts\JQWidgets\jqxdockinglayout.js" />
+    <Content Include="Scripts\JQWidgets\jqxdockpanel.js" />
+    <Content Include="Scripts\JQWidgets\jqxdragdrop.js" />
+    <Content Include="Scripts\JQWidgets\jqxdraw.js" />
+    <Content Include="Scripts\JQWidgets\jqxdropdownbutton.js" />
+    <Content Include="Scripts\JQWidgets\jqxdropdownlist.js" />
+    <Content Include="Scripts\JQWidgets\jqxeditor.js" />
+    <Content Include="Scripts\JQWidgets\jqxexpander.js" />
+    <Content Include="Scripts\JQWidgets\jqxfileupload.js" />
+    <Content Include="Scripts\JQWidgets\jqxform.js" />
+    <Content Include="Scripts\JQWidgets\jqxformattedinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxgauge.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.aggregates.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.columnsreorder.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.columnsresize.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.edit.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.export.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.filter.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.grouping.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.pager.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.selection.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.sort.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.storage.js" />
+    <Content Include="Scripts\JQWidgets\jqxinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxkanban.js" />
+    <Content Include="Scripts\JQWidgets\jqxknob.js" />
+    <Content Include="Scripts\JQWidgets\jqxknockout.js" />
+    <Content Include="Scripts\JQWidgets\jqxlayout.js" />
+    <Content Include="Scripts\JQWidgets\jqxlistbox.js" />
+    <Content Include="Scripts\JQWidgets\jqxlistmenu.js" />
+    <Content Include="Scripts\JQWidgets\jqxloader.js" />
+    <Content Include="Scripts\JQWidgets\jqxmaskedinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxmenu.js" />
+    <Content Include="Scripts\JQWidgets\jqxnavbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxnavigationbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxnotification.js" />
+    <Content Include="Scripts\JQWidgets\jqxnumberinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxpanel.js" />
+    <Content Include="Scripts\JQWidgets\jqxpasswordinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxpivot.js" />
+    <Content Include="Scripts\JQWidgets\jqxpivotdesigner.js" />
+    <Content Include="Scripts\JQWidgets\jqxpivotgrid.js" />
+    <Content Include="Scripts\JQWidgets\jqxpopover.js" />
+    <Content Include="Scripts\JQWidgets\jqxprogressbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxradiobutton.js" />
+    <Content Include="Scripts\JQWidgets\jqxrangeselector.js" />
+    <Content Include="Scripts\JQWidgets\jqxrating.js" />
+    <Content Include="Scripts\JQWidgets\jqxresponse.js" />
+    <Content Include="Scripts\JQWidgets\jqxresponsivepanel.js" />
+    <Content Include="Scripts\JQWidgets\jqxribbon.js" />
+    <Content Include="Scripts\JQWidgets\jqxscheduler.api.js" />
+    <Content Include="Scripts\JQWidgets\jqxscheduler.js" />
+    <Content Include="Scripts\JQWidgets\jqxscrollbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxscrollview.js" />
+    <Content Include="Scripts\JQWidgets\jqxslider.js" />
+    <Content Include="Scripts\JQWidgets\jqxsortable.js" />
+    <Content Include="Scripts\JQWidgets\jqxsplitter.js" />
+    <Content Include="Scripts\JQWidgets\jqxswitchbutton.js" />
+    <Content Include="Scripts\JQWidgets\jqxtabs.js" />
+    <Content Include="Scripts\JQWidgets\jqxtagcloud.js" />
+    <Content Include="Scripts\JQWidgets\jqxtextarea.js" />
+    <Content Include="Scripts\JQWidgets\jqxtoolbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxtooltip.js" />
+    <Content Include="Scripts\JQWidgets\jqxtouch.js" />
+    <Content Include="Scripts\JQWidgets\jqxtree.js" />
+    <Content Include="Scripts\JQWidgets\jqxtreegrid.js" />
+    <Content Include="Scripts\JQWidgets\jqxtreemap.js" />
+    <Content Include="Scripts\JQWidgets\jqxvalidator.js" />
+    <Content Include="Scripts\JQWidgets\jqxwindow.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js">
+      <DependentUpon>moment-with-locales.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\pace.js" />
+    <Content Include="Scripts\pace.min.js">
+      <DependentUpon>pace.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\perfect-scrollbar.js" />
+    <Content Include="Scripts\perfect-scrollbar.min.js">
+      <DependentUpon>perfect-scrollbar.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js">
+      <DependentUpon>popper-utils.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\screenfull.js" />
+    <Content Include="Scripts\screenfull.min.js">
+      <DependentUpon>screenfull.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js">
+      <DependentUpon>toastr.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\unison.js" />
+    <Content Include="Scripts\unison.min.js">
+      <DependentUpon>unison.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\vendors.min.js" />
+    <Content Include="SerAgro.asmx" />
+    <Content Include="SerCali.asmx" />
+    <Content Include="SerPres.asmx" />
+    <Content Include="SerProd.asmx" />
+    <Content Include="SerRepo.asmx" />
+    <Content Include="SerRRHH.asmx" />
+    <Content Include="SerSegu.asmx" />
+    <Content Include="sound\alerta.mp3" />
+    <Content Include="sound\error.mp3" />
+    <Content Include="sound\ok.mp3" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="beta.aspx.cs">
+      <DependentUpon>beta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="beta.aspx.designer.cs">
+      <DependentUpon>beta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Beta2.aspx.cs">
+      <DependentUpon>Beta2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Beta2.aspx.designer.cs">
+      <DependentUpon>Beta2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_CostosDistribuidos.aspx.cs">
+      <DependentUpon>Wfo_CostosDistribuidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_CostosDistribuidos.aspx.designer.cs">
+      <DependentUpon>Wfo_CostosDistribuidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ReporteVentas.aspx.cs">
+      <DependentUpon>Wfo_ReporteVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ReporteVentas.aspx.designer.cs">
+      <DependentUpon>Wfo_ReporteVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Saldoporcobrar.aspx.cs">
+      <DependentUpon>Wfo_Saldoporcobrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Saldoporcobrar.aspx.designer.cs">
+      <DependentUpon>Wfo_Saldoporcobrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_CreateGuiaRemision.aspx.cs">
+      <DependentUpon>Wfo_CreateGuiaRemision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_CreateGuiaRemision.aspx.designer.cs">
+      <DependentUpon>Wfo_CreateGuiaRemision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_PrintGuia.aspx.cs">
+      <DependentUpon>Wfo_PrintGuia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_PrintGuia.aspx.designer.cs">
+      <DependentUpon>Wfo_PrintGuia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Propiedades.aspx.cs">
+      <DependentUpon>Wfo_Propiedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Propiedades.aspx.designer.cs">
+      <DependentUpon>Wfo_Propiedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Reg_Chofe_Placas.aspx.cs">
+      <DependentUpon>Wfo_Reg_Chofe_Placas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Reg_Chofe_Placas.aspx.designer.cs">
+      <DependentUpon>Wfo_Reg_Chofe_Placas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Reg_Sup_Evaluador.aspx.cs">
+      <DependentUpon>Wfo_Reg_Sup_Evaluador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Reg_Sup_Evaluador.aspx.designer.cs">
+      <DependentUpon>Wfo_Reg_Sup_Evaluador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_RepCalPda.aspx.cs">
+      <DependentUpon>Wfo_RepCalPda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_RepCalPda.aspx.designer.cs">
+      <DependentUpon>Wfo_RepCalPda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_SyncRV_Aplicaciones.aspx.cs">
+      <DependentUpon>Wfo_SyncRV_Aplicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_SyncRV_Aplicaciones.aspx.designer.cs">
+      <DependentUpon>Wfo_SyncRV_Aplicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Tareo.aspx.cs">
+      <DependentUpon>Wfo_Tareo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Tareo.aspx.designer.cs">
+      <DependentUpon>Wfo_Tareo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Tareo2.aspx.cs">
+      <DependentUpon>Wfo_Tareo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Tareo2.aspx.designer.cs">
+      <DependentUpon>Wfo_Tareo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TareoCampo.aspx.cs">
+      <DependentUpon>Wfo_TareoCampo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TareoCampo.aspx.designer.cs">
+      <DependentUpon>Wfo_TareoCampo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TrazabilidadExportacion.aspx.cs">
+      <DependentUpon>Wfo_TrazabilidadExportacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TrazabilidadExportacion.aspx.designer.cs">
+      <DependentUpon>Wfo_TrazabilidadExportacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TranferenciaGuias.aspx.cs">
+      <DependentUpon>Wfo_TranferenciaGuias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TranferenciaGuias.aspx.designer.cs">
+      <DependentUpon>Wfo_TranferenciaGuias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ViewMapLotes.aspx.cs">
+      <DependentUpon>Wfo_ViewMapLotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ViewMapLotes.aspx.designer.cs">
+      <DependentUpon>Wfo_ViewMapLotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ReportePiscina.aspx.cs">
+      <DependentUpon>Wfo_ReportePiscina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ReportePiscina.aspx.designer.cs">
+      <DependentUpon>Wfo_ReportePiscina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ReportePiscinaK.aspx.cs">
+      <DependentUpon>Wfo_ReportePiscinaK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ReportePiscinaK.aspx.designer.cs">
+      <DependentUpon>Wfo_ReportePiscinaK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_SyncRaptorView.aspx.cs">
+      <DependentUpon>Wfo_SyncRaptorView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_SyncRaptorView.aspx.designer.cs">
+      <DependentUpon>Wfo_SyncRaptorView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ViewMapLotesLegal.aspx.cs">
+      <DependentUpon>Wfo_ViewMapLotesLegal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_ViewMapLotesLegal.aspx.designer.cs">
+      <DependentUpon>Wfo_ViewMapLotesLegal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Login.asmx.cs">
+      <DependentUpon>Login.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Subir.aspx.cs">
+      <DependentUpon>Subir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Subir.aspx.designer.cs">
+      <DependentUpon>Subir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Util.cs" />
+    <Compile Include="Mod_App\vcFilename.cs" />
+    <Compile Include="Mod_App\Wfo_AsistenciaRegi.aspx.cs">
+      <DependentUpon>Wfo_AsistenciaRegi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_AsistenciaRegi.aspx.designer.cs">
+      <DependentUpon>Wfo_AsistenciaRegi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Comparaciontickets.aspx.cs">
+      <DependentUpon>Wfo_Comparaciontickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Comparaciontickets.aspx.designer.cs">
+      <DependentUpon>Wfo_Comparaciontickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_ConsultaRendimiento.aspx.cs">
+      <DependentUpon>Wfo_ConsultaRendimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_ConsultaRendimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_ConsultaRendimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_EspEmbalaje.aspx.cs">
+      <DependentUpon>Wfo_EspEmbalaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_EspEmbalaje.aspx.designer.cs">
+      <DependentUpon>Wfo_EspEmbalaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_GasificadoReporte_PaletsPorTunel.aspx.cs">
+      <DependentUpon>Wfo_GasificadoReporte_PaletsPorTunel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_GasificadoReporte_PaletsPorTunel.aspx.designer.cs">
+      <DependentUpon>Wfo_GasificadoReporte_PaletsPorTunel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_LecturaPacking.aspx.cs">
+      <DependentUpon>Wfo_LecturaPacking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_LecturaPacking.aspx.designer.cs">
+      <DependentUpon>Wfo_LecturaPacking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniDetaRedimiento.aspx.cs">
+      <DependentUpon>Wfo_MoniDetaRedimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniDetaRedimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniDetaRedimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MonitoreoDispositivos.aspx.cs">
+      <DependentUpon>Wfo_MonitoreoDispositivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MonitoreoDispositivos.aspx.designer.cs">
+      <DependentUpon>Wfo_MonitoreoDispositivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MonitorServer.aspx.cs">
+      <DependentUpon>Wfo_MonitorServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MonitorServer.aspx.designer.cs">
+      <DependentUpon>Wfo_MonitorServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_NuevaClave.aspx.cs">
+      <DependentUpon>Wfo_NuevaClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_NuevaClave.aspx.designer.cs">
+      <DependentUpon>Wfo_NuevaClave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Olvide.aspx.cs">
+      <DependentUpon>Wfo_Olvide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Olvide.aspx.designer.cs">
+      <DependentUpon>Wfo_Olvide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Parteproduccion.aspx.cs">
+      <DependentUpon>Wfo_Parteproduccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Parteproduccion.aspx.designer.cs">
+      <DependentUpon>Wfo_Parteproduccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Presentacion.aspx.cs">
+      <DependentUpon>Wfo_Presentacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Presentacion.aspx.designer.cs">
+      <DependentUpon>Wfo_Presentacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_PruebaUtilidades.aspx.cs">
+      <DependentUpon>Wfo_PruebaUtilidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_PruebaUtilidades.aspx.designer.cs">
+      <DependentUpon>Wfo_PruebaUtilidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_RendimientoLineas.aspx.cs">
+      <DependentUpon>Wfo_RendimientoLineas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_RendimientoLineas.aspx.designer.cs">
+      <DependentUpon>Wfo_RendimientoLineas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_RepView.aspx.cs">
+      <DependentUpon>Wfo_RepView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_RepView.aspx.designer.cs">
+      <DependentUpon>Wfo_RepView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Tiemporecepcion.aspx.cs">
+      <DependentUpon>Wfo_Tiemporecepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Tiemporecepcion.aspx.designer.cs">
+      <DependentUpon>Wfo_Tiemporecepcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Tiemporecepcion_Actualizar.aspx.cs">
+      <DependentUpon>Wfo_Tiemporecepcion_Actualizar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Tiemporecepcion_Actualizar.aspx.designer.cs">
+      <DependentUpon>Wfo_Tiemporecepcion_Actualizar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_CertificadoCalidadPoda.aspx.cs">
+      <DependentUpon>Wfo_CertificadoCalidadPoda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_CertificadoCalidadPoda.aspx.designer.cs">
+      <DependentUpon>Wfo_CertificadoCalidadPoda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_CertificadoCalidad.aspx.cs">
+      <DependentUpon>Wfo_CertificadoCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_CertificadoCalidad.aspx.designer.cs">
+      <DependentUpon>Wfo_CertificadoCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_CertificadoCalidadAmarre.aspx.cs">
+      <DependentUpon>Wfo_CertificadoCalidadAmarre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_CertificadoCalidadAmarre.aspx.designer.cs">
+      <DependentUpon>Wfo_CertificadoCalidadAmarre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\WfoRepPalta.aspx.cs">
+      <DependentUpon>WfoRepPalta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\WfoRepPalta.aspx.designer.cs">
+      <DependentUpon>WfoRepPalta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_RepCaEst.aspx.cs">
+      <DependentUpon>Wfo_RepCaEst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_RepCaEst.aspx.designer.cs">
+      <DependentUpon>Wfo_RepCaEst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_RepCalidad.aspx.cs">
+      <DependentUpon>Wfo_RepCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_RepCalidad.aspx.designer.cs">
+      <DependentUpon>Wfo_RepCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_RepGeneralCalidad.aspx.cs">
+      <DependentUpon>Wfo_RepGeneralCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_RepGeneralCalidad.aspx.designer.cs">
+      <DependentUpon>Wfo_RepGeneralCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_ActualizaGuiaCliente.aspx.cs">
+      <DependentUpon>Wfo_ActualizaGuiaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_ActualizaGuiaCliente.aspx.designer.cs">
+      <DependentUpon>Wfo_ActualizaGuiaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Conta\Wfo_InventarioAlmacenes.aspx.cs">
+      <DependentUpon>Wfo_InventarioAlmacenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Conta\Wfo_InventarioAlmacenes.aspx.designer.cs">
+      <DependentUpon>Wfo_InventarioAlmacenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_CPF\Wfo_ExportCpf.aspx.cs">
+      <DependentUpon>Wfo_ExportCpf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_CPF\Wfo_ExportCpf.aspx.designer.cs">
+      <DependentUpon>Wfo_ExportCpf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_ConFrio.aspx.cs">
+      <DependentUpon>Wfo_ConFrio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_ConFrio.aspx.designer.cs">
+      <DependentUpon>Wfo_ConFrio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_FrioTHD.aspx.cs">
+      <DependentUpon>Wfo_FrioTHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_FrioTHD.aspx.designer.cs">
+      <DependentUpon>Wfo_FrioTHD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_AprobReqNIS2.aspx.cs">
+      <DependentUpon>Wfo_AprobReqNIS2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_AprobReqNIS2.aspx.designer.cs">
+      <DependentUpon>Wfo_AprobReqNIS2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_AprobRequNis.aspx.cs">
+      <DependentUpon>Wfo_AprobRequNis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_AprobRequNis.aspx.designer.cs">
+      <DependentUpon>Wfo_AprobRequNis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_RegiLifeTime.aspx.cs">
+      <DependentUpon>Wfo_RegiLifeTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_RegiLifeTime.aspx.designer.cs">
+      <DependentUpon>Wfo_RegiLifeTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_ReporteAnalisisCompras.aspx.cs">
+      <DependentUpon>Wfo_ReporteAnalisisCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_ReporteAnalisisCompras.aspx.designer.cs">
+      <DependentUpon>Wfo_ReporteAnalisisCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_RestablecerPedidos.aspx.cs">
+      <DependentUpon>Wfo_RestablecerPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_RestablecerPedidos.aspx.designer.cs">
+      <DependentUpon>Wfo_RestablecerPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_TrazabilidadRequerimiento.aspx.cs">
+      <DependentUpon>Wfo_TrazabilidadRequerimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_TrazabilidadRequerimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_TrazabilidadRequerimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_RepoReparacionesAdm.aspx.cs">
+      <DependentUpon>Wfo_RepoReparacionesAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_RepoReparacionesAdm.aspx.designer.cs">
+      <DependentUpon>Wfo_RepoReparacionesAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Maes\Wfo_RepoReparaciones.aspx.cs">
+      <DependentUpon>Wfo_RepoReparaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Maes\Wfo_RepoReparaciones.aspx.designer.cs">
+      <DependentUpon>Wfo_RepoReparaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Maes\Wfo_Table_Evento.aspx.cs">
+      <DependentUpon>Wfo_Table_Evento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Maes\Wfo_Table_Evento.aspx.designer.cs">
+      <DependentUpon>Wfo_Table_Evento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_ConfProd.aspx.cs">
+      <DependentUpon>Wfo_ConfProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_ConfProd.aspx.designer.cs">
+      <DependentUpon>Wfo_ConfProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresMen.aspx.cs">
+      <DependentUpon>Wfo_PresMen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresMen.aspx.designer.cs">
+      <DependentUpon>Wfo_PresMen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AnularEtiquetas.aspx.cs">
+      <DependentUpon>Wfo_AnularEtiquetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AnularEtiquetas.aspx.designer.cs">
+      <DependentUpon>Wfo_AnularEtiquetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ParadasProceso.aspx.cs">
+      <DependentUpon>Wfo_ParadasProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ParadasProceso.aspx.designer.cs">
+      <DependentUpon>Wfo_ParadasProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_RegistroPersonal.aspx.cs">
+      <DependentUpon>Wfo_RegistroPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_RegistroPersonal.aspx.designer.cs">
+      <DependentUpon>Wfo_RegistroPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AvancePersonal.aspx.cs">
+      <DependentUpon>Wfo_AvancePersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AvancePersonal.aspx.designer.cs">
+      <DependentUpon>Wfo_AvancePersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AvanceProduccion.aspx.cs">
+      <DependentUpon>Wfo_AvanceProduccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AvanceProduccion.aspx.designer.cs">
+      <DependentUpon>Wfo_AvanceProduccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ComparativoCampania.aspx.cs">
+      <DependentUpon>Wfo_ComparativoCampania.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ComparativoCampania.aspx.designer.cs">
+      <DependentUpon>Wfo_ComparativoCampania.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_DetalleProceso.aspx.cs">
+      <DependentUpon>Wfo_DetalleProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_DetalleProceso.aspx.designer.cs">
+      <DependentUpon>Wfo_DetalleProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_EspEmbalajeCrud.aspx.cs">
+      <DependentUpon>Wfo_EspEmbalajeCrud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_EspEmbalajeCrud.aspx.designer.cs">
+      <DependentUpon>Wfo_EspEmbalajeCrud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_IRUsuario.aspx.cs">
+      <DependentUpon>Wfo_IRUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_IRUsuario.aspx.designer.cs">
+      <DependentUpon>Wfo_IRUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ReporteCostosDistribuidos.aspx.cs">
+      <DependentUpon>Wfo_ReporteCostosDistribuidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ReporteCostosDistribuidos.aspx.designer.cs">
+      <DependentUpon>Wfo_ReporteCostosDistribuidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReadLineas2.aspx.cs">
+      <DependentUpon>Wfo_ReadLineas2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReadLineas2.aspx.designer.cs">
+      <DependentUpon>Wfo_ReadLineas2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_RepPesoPaleta.aspx.cs">
+      <DependentUpon>Wfo_RepPesoPaleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_RepPesoPaleta.aspx.designer.cs">
+      <DependentUpon>Wfo_RepPesoPaleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_SyncRendimiento_Nisira.aspx.cs">
+      <DependentUpon>Wfo_SyncRendimiento_Nisira.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_SyncRendimiento_Nisira.aspx.designer.cs">
+      <DependentUpon>Wfo_SyncRendimiento_Nisira.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_VolcadoProceso.aspx.cs">
+      <DependentUpon>Wfo_VolcadoProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_VolcadoProceso.aspx.designer.cs">
+      <DependentUpon>Wfo_VolcadoProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Recep\Wfo_Gasificado.aspx.cs">
+      <DependentUpon>Wfo_Gasificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Recep\Wfo_Gasificado.aspx.designer.cs">
+      <DependentUpon>Wfo_Gasificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ControlProyectosAnaliticos.aspx.cs">
+      <DependentUpon>Wfo_ControlProyectosAnaliticos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ControlProyectosAnaliticos.aspx.designer.cs">
+      <DependentUpon>Wfo_ControlProyectosAnaliticos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Costeo.aspx.cs">
+      <DependentUpon>Wfo_Costeo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Costeo.aspx.designer.cs">
+      <DependentUpon>Wfo_Costeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_CosteoMOSemanal.aspx.cs">
+      <DependentUpon>Wfo_CosteoMOSemanal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_CosteoMOSemanal.aspx.designer.cs">
+      <DependentUpon>Wfo_CosteoMOSemanal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_GastosPorCC.aspx.cs">
+      <DependentUpon>Wfo_GastosPorCC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_GastosPorCC.aspx.designer.cs">
+      <DependentUpon>Wfo_GastosPorCC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_InventarioAlmacen.aspx.cs">
+      <DependentUpon>Wfo_InventarioAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_InventarioAlmacen.aspx.designer.cs">
+      <DependentUpon>Wfo_InventarioAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Organigrama.aspx.cs">
+      <DependentUpon>Wfo_Organigrama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Organigrama.aspx.designer.cs">
+      <DependentUpon>Wfo_Organigrama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Archivos.aspx.cs">
+      <DependentUpon>Wfo_Archivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_Archivos.aspx.designer.cs">
+      <DependentUpon>Wfo_Archivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ReporteGerencialCostos.aspx.cs">
+      <DependentUpon>Wfo_ReporteGerencialCostos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_ReporteGerencialCostos.aspx.designer.cs">
+      <DependentUpon>Wfo_ReporteGerencialCostos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_RepPakingListFact.aspx.cs">
+      <DependentUpon>Wfo_RepPakingListFact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_RepPakingListFact.aspx.designer.cs">
+      <DependentUpon>Wfo_RepPakingListFact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_RevisionProcesos.aspx.cs">
+      <DependentUpon>Wfo_RevisionProcesos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Admi\Wfo_RevisionProcesos.aspx.designer.cs">
+      <DependentUpon>Wfo_RevisionProcesos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_InfPartCampActSimple.aspx.cs">
+      <DependentUpon>Wfo_InfPartCampActSimple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_InfPartCampActSimple.aspx.designer.cs">
+      <DependentUpon>Wfo_InfPartCampActSimple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_PropiedadesMaps.aspx.cs">
+      <DependentUpon>Wfo_PropiedadesMaps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_PropiedadesMaps.aspx.designer.cs">
+      <DependentUpon>Wfo_PropiedadesMaps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Track.aspx.cs">
+      <DependentUpon>Wfo_Track.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_Track.aspx.designer.cs">
+      <DependentUpon>Wfo_Track.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TrackView.aspx.cs">
+      <DependentUpon>Wfo_TrackView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Agro\Wfo_TrackView.aspx.designer.cs">
+      <DependentUpon>Wfo_TrackView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Alm\Wfo_InfReqConsumo.aspx.cs">
+      <DependentUpon>Wfo_InfReqConsumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Alm\Wfo_InfReqConsumo.aspx.designer.cs">
+      <DependentUpon>Wfo_InfReqConsumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\SerApp.asmx.cs">
+      <DependentUpon>SerApp.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_App\SerReports.asmx.cs">
+      <DependentUpon>SerReports.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Asistencia.aspx.cs">
+      <DependentUpon>Wfo_Asistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Asistencia.aspx.designer.cs">
+      <DependentUpon>Wfo_Asistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_ConsultaUtilidad.aspx.cs">
+      <DependentUpon>Wfo_ConsultaUtilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_ConsultaUtilidad.aspx.designer.cs">
+      <DependentUpon>Wfo_ConsultaUtilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_FichaSC19.aspx.cs">
+      <DependentUpon>Wfo_FichaSC19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_FichaSC19.aspx.designer.cs">
+      <DependentUpon>Wfo_FichaSC19.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_GetPost.aspx.cs">
+      <DependentUpon>Wfo_GetPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_GetPost.aspx.designer.cs">
+      <DependentUpon>Wfo_GetPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Inscripcion_Personal.aspx.cs">
+      <DependentUpon>Wfo_Inscripcion_Personal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_Inscripcion_Personal.aspx.designer.cs">
+      <DependentUpon>Wfo_Inscripcion_Personal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniAbastecimiento.aspx.cs">
+      <DependentUpon>Wfo_MoniAbastecimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniAbastecimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniAbastecimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniProceso.aspx.cs">
+      <DependentUpon>Wfo_MoniProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniProceso.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniIngresoCamionesMP.aspx.cs">
+      <DependentUpon>Wfo_MoniIngresoCamionesMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniIngresoCamionesMP.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniIngresoCamionesMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniRend.aspx.cs">
+      <DependentUpon>Wfo_MoniRend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniRend.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniRend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniRendimiento.aspx.cs">
+      <DependentUpon>Wfo_MoniRendimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniRendimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniRendimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniLine.aspx.cs">
+      <DependentUpon>Wfo_MoniLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MoniLine.aspx.designer.cs">
+      <DependentUpon>Wfo_MoniLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MonitorComedor.aspx.cs">
+      <DependentUpon>Wfo_MonitorComedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_MonitorComedor.aspx.designer.cs">
+      <DependentUpon>Wfo_MonitorComedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_test.aspx.cs">
+      <DependentUpon>Wfo_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_test.aspx.designer.cs">
+      <DependentUpon>Wfo_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_TicketRegi.aspx.cs">
+      <DependentUpon>Wfo_TicketRegi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_TicketRegi.aspx.designer.cs">
+      <DependentUpon>Wfo_TicketRegi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_TicketRendimiento.aspx.cs">
+      <DependentUpon>Wfo_TicketRendimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_TicketRendimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_TicketRendimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_UploadFile.aspx.cs">
+      <DependentUpon>Wfo_UploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_App\Wfo_UploadFile.aspx.designer.cs">
+      <DependentUpon>Wfo_UploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_ContrList-Edit.aspx.cs">
+      <DependentUpon>Wfo_ContrList-Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_ContrList-Edit.aspx.designer.cs">
+      <DependentUpon>Wfo_ContrList-Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_ContrList.aspx.cs">
+      <DependentUpon>Wfo_ContrList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_ContrList.aspx.designer.cs">
+      <DependentUpon>Wfo_ContrList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_ContrParam.aspx.cs">
+      <DependentUpon>Wfo_ContrParam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cali\Wfo_ContrParam.aspx.designer.cs">
+      <DependentUpon>Wfo_ContrParam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_InstruccionEmbarque.aspx.cs">
+      <DependentUpon>Wfo_InstruccionEmbarque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_InstruccionEmbarque.aspx.designer.cs">
+      <DependentUpon>Wfo_InstruccionEmbarque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_OrdenEmbarque.aspx.cs">
+      <DependentUpon>Wfo_OrdenEmbarque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_OrdenEmbarque.aspx.designer.cs">
+      <DependentUpon>Wfo_OrdenEmbarque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_OrdenEmbarque_Edit.aspx.cs">
+      <DependentUpon>Wfo_OrdenEmbarque_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Cmx\Wfo_OrdenEmbarque_Edit.aspx.designer.cs">
+      <DependentUpon>Wfo_OrdenEmbarque_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Extr\Wfo_ProvMP.aspx.cs">
+      <DependentUpon>Wfo_ProvMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Extr\Wfo_ProvMP.aspx.designer.cs">
+      <DependentUpon>Wfo_ProvMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_OrdCarga-Edit.aspx.cs">
+      <DependentUpon>Wfo_OrdCarga-Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_OrdCarga-Edit.aspx.designer.cs">
+      <DependentUpon>Wfo_OrdCarga-Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_OrdCarga.aspx.cs">
+      <DependentUpon>Wfo_OrdCarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_OrdCarga.aspx.designer.cs">
+      <DependentUpon>Wfo_OrdCarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_PaleUbic.aspx.cs">
+      <DependentUpon>Wfo_PaleUbic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_PaleUbic.aspx.designer.cs">
+      <DependentUpon>Wfo_PaleUbic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Hisp\Wfo_LogSincronizacionNH.aspx.cs">
+      <DependentUpon>Wfo_LogSincronizacionNH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Hisp\Wfo_LogSincronizacionNH.aspx.designer.cs">
+      <DependentUpon>Wfo_LogSincronizacionNH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Hisp\Wfo_Transferencia.aspx.cs">
+      <DependentUpon>Wfo_Transferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Hisp\Wfo_Transferencia.aspx.designer.cs">
+      <DependentUpon>Wfo_Transferencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_AprobRequ.aspx.cs">
+      <DependentUpon>Wfo_AprobRequ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_AprobRequ.aspx.designer.cs">
+      <DependentUpon>Wfo_AprobRequ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_ReqvsExistencia.aspx.cs">
+      <DependentUpon>Wfo_ReqvsExistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Logi\Wfo_ReqvsExistencia.aspx.designer.cs">
+      <DependentUpon>Wfo_ReqvsExistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresIndirecto-Edit.aspx.cs">
+      <DependentUpon>Wfo_PresIndirecto-Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresIndirecto-Edit.aspx.designer.cs">
+      <DependentUpon>Wfo_PresIndirecto-Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresIndirecto.aspx.cs">
+      <DependentUpon>Wfo_PresIndirecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresIndirecto.aspx.designer.cs">
+      <DependentUpon>Wfo_PresIndirecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresMaster-Repo.aspx.cs">
+      <DependentUpon>Wfo_PresMaster-Repo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresMaster-Repo.aspx.designer.cs">
+      <DependentUpon>Wfo_PresMaster-Repo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresMaster.aspx.cs">
+      <DependentUpon>Wfo_PresMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_PresMaster.aspx.designer.cs">
+      <DependentUpon>Wfo_PresMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_UnidNegocio-Edit.aspx.cs">
+      <DependentUpon>Wfo_UnidNegocio-Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_UnidNegocio-Edit.aspx.designer.cs">
+      <DependentUpon>Wfo_UnidNegocio-Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_UnidNegocio-Repo.aspx.cs">
+      <DependentUpon>Wfo_UnidNegocio-Repo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_UnidNegocio-Repo.aspx.designer.cs">
+      <DependentUpon>Wfo_UnidNegocio-Repo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_UnidNegocio.aspx.cs">
+      <DependentUpon>Wfo_UnidNegocio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Pres\Wfo_UnidNegocio.aspx.designer.cs">
+      <DependentUpon>Wfo_UnidNegocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ActualizaPesoPalet.aspx.cs">
+      <DependentUpon>Wfo_ActualizaPesoPalet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ActualizaPesoPalet.aspx.designer.cs">
+      <DependentUpon>Wfo_ActualizaPesoPalet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AssigPersonal.aspx.cs">
+      <DependentUpon>Wfo_AssigPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_AssigPersonal.aspx.designer.cs">
+      <DependentUpon>Wfo_AssigPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ComparacionCapania.aspx.cs">
+      <DependentUpon>Wfo_ComparacionCapania.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ComparacionCapania.aspx.designer.cs">
+      <DependentUpon>Wfo_ComparacionCapania.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_HorasEfectivas.aspx.cs">
+      <DependentUpon>Wfo_HorasEfectivas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_HorasEfectivas.aspx.designer.cs">
+      <DependentUpon>Wfo_HorasEfectivas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_InfoLine.aspx.cs">
+      <DependentUpon>Wfo_InfoLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_InfoLine.aspx.designer.cs">
+      <DependentUpon>Wfo_InfoLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_InformeParteTransformacion.aspx.cs">
+      <DependentUpon>Wfo_InformeParteTransformacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_InformeParteTransformacion.aspx.designer.cs">
+      <DependentUpon>Wfo_InformeParteTransformacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ParteTransf.aspx.cs">
+      <DependentUpon>Wfo_ParteTransf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ParteTransf.aspx.designer.cs">
+      <DependentUpon>Wfo_ParteTransf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_Proceso.aspx.cs">
+      <DependentUpon>Wfo_Proceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_Proceso.aspx.designer.cs">
+      <DependentUpon>Wfo_Proceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReadLineas.aspx.cs">
+      <DependentUpon>Wfo_ReadLineas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReadLineas.aspx.designer.cs">
+      <DependentUpon>Wfo_ReadLineas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReadLineas_Xlotes.aspx.cs">
+      <DependentUpon>Wfo_ReadLineas_Xlotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReadLineas_Xlotes.aspx.designer.cs">
+      <DependentUpon>Wfo_ReadLineas_Xlotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_RecepcionMP.aspx.cs">
+      <DependentUpon>Wfo_RecepcionMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_RecepcionMP.aspx.designer.cs">
+      <DependentUpon>Wfo_RecepcionMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReporteRendimiento.aspx.cs">
+      <DependentUpon>Wfo_ReporteRendimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_ReporteRendimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_ReporteRendimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_Reporte_TR.aspx.cs">
+      <DependentUpon>Wfo_Reporte_TR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_Reporte_TR.aspx.designer.cs">
+      <DependentUpon>Wfo_Reporte_TR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_vsProyectado.aspx.cs">
+      <DependentUpon>Wfo_vsProyectado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Prod\Wfo_vsProyectado.aspx.designer.cs">
+      <DependentUpon>Wfo_vsProyectado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Recep\Wfo_GasificadoReporte.aspx.cs">
+      <DependentUpon>Wfo_GasificadoReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Recep\Wfo_GasificadoReporte.aspx.designer.cs">
+      <DependentUpon>Wfo_GasificadoReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Recep\Wfo_GasificadoReporte_PaletsPorTunel.aspx.cs">
+      <DependentUpon>Wfo_GasificadoReporte_PaletsPorTunel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Recep\Wfo_GasificadoReporte_PaletsPorTunel.aspx.designer.cs">
+      <DependentUpon>Wfo_GasificadoReporte_PaletsPorTunel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RepoBI\Wfo_RendimientoP.aspx.cs">
+      <DependentUpon>Wfo_RendimientoP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RepoBI\Wfo_RendimientoP.aspx.designer.cs">
+      <DependentUpon>Wfo_RendimientoP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_BoletaTick.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_BoletaTick.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_FichaSC19.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_FichaSC19.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_OrdenEmbarquecmx.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_OrdenEmbarquecmx.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_PresCultivo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_PresCultivo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_Presupuesto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_Presupuesto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_RendimientoPack.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_RendimientoPack.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_TicketAlimento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_TicketAlimento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\reports\Crt_Utilidades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crt_Utilidades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\Wfo_ReporteStock.aspx.cs">
+      <DependentUpon>Wfo_ReporteStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\Wfo_ReporteStock.aspx.designer.cs">
+      <DependentUpon>Wfo_ReporteStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Repo\Wfo_RepoView.aspx.cs">
+      <DependentUpon>Wfo_RepoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Repo\Wfo_RepoView.aspx.designer.cs">
+      <DependentUpon>Wfo_RepoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\DocPersonal\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\DocPersonal\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\ImgPersonal\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\ImgPersonal\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\InformeTareaCampo.aspx.cs">
+      <DependentUpon>InformeTareaCampo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\InformeTareaCampo.aspx.designer.cs">
+      <DependentUpon>InformeTareaCampo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ActualizarFoto.aspx.cs">
+      <DependentUpon>Wfo_ActualizarFoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ActualizarFoto.aspx.designer.cs">
+      <DependentUpon>Wfo_ActualizarFoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_AsistenciaJefatura.aspx.cs">
+      <DependentUpon>Wfo_AsistenciaJefatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_AsistenciaJefatura.aspx.designer.cs">
+      <DependentUpon>Wfo_AsistenciaJefatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_EnvioInfMasiva.aspx.cs">
+      <DependentUpon>Wfo_EnvioInfMasiva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_EnvioInfMasiva.aspx.designer.cs">
+      <DependentUpon>Wfo_EnvioInfMasiva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_FichaCovid19.aspx.cs">
+      <DependentUpon>Wfo_FichaCovid19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_FichaCovid19.aspx.designer.cs">
+      <DependentUpon>Wfo_FichaCovid19.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_HisSalidasIngresos.aspx.cs">
+      <DependentUpon>Wfo_HisSalidasIngresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_HisSalidasIngresos.aspx.designer.cs">
+      <DependentUpon>Wfo_HisSalidasIngresos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ImpCapacitaciones.aspx.cs">
+      <DependentUpon>Wfo_ImpCapacitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ImpCapacitaciones.aspx.designer.cs">
+      <DependentUpon>Wfo_ImpCapacitaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_InformeParteCampo.aspx.cs">
+      <DependentUpon>Wfo_InformeParteCampo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_InformeParteCampo.aspx.designer.cs">
+      <DependentUpon>Wfo_InformeParteCampo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_InformeTareaCampo.aspx.cs">
+      <DependentUpon>Wfo_InformeTareaCampo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_InformeTareaCampo.aspx.designer.cs">
+      <DependentUpon>Wfo_InformeTareaCampo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_Planilla.aspx.cs">
+      <DependentUpon>Wfo_Planilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_Planilla.aspx.designer.cs">
+      <DependentUpon>Wfo_Planilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_PreInscripcionPersonal.aspx.cs">
+      <DependentUpon>Wfo_PreInscripcionPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_PreInscripcionPersonal.aspx.designer.cs">
+      <DependentUpon>Wfo_PreInscripcionPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_RepoHorasActividad.aspx.cs">
+      <DependentUpon>Wfo_RepoHorasActividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_RepoHorasActividad.aspx.designer.cs">
+      <DependentUpon>Wfo_RepoHorasActividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_RRHHExc.aspx.cs">
+      <DependentUpon>Wfo_RRHHExc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_RRHHExc.aspx.designer.cs">
+      <DependentUpon>Wfo_RRHHExc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_SyncTareo.aspx.cs">
+      <DependentUpon>Wfo_SyncTareo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_SyncTareo.aspx.designer.cs">
+      <DependentUpon>Wfo_SyncTareo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_TareoAdicional.aspx.cs">
+      <DependentUpon>Wfo_TareoAdicional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_TareoAdicional.aspx.designer.cs">
+      <DependentUpon>Wfo_TareoAdicional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ViewAsistencia.aspx.cs">
+      <DependentUpon>Wfo_ViewAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ViewAsistencia.aspx.designer.cs">
+      <DependentUpon>Wfo_ViewAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_BoletaRep.aspx.cs">
+      <DependentUpon>Wfo_BoletaRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_BoletaRep.aspx.designer.cs">
+      <DependentUpon>Wfo_BoletaRep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ComedorRepo.aspx.cs">
+      <DependentUpon>Wfo_ComedorRepo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_ComedorRepo.aspx.designer.cs">
+      <DependentUpon>Wfo_ComedorRepo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_HorComedor.aspx.cs">
+      <DependentUpon>Wfo_HorComedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_HorComedor.aspx.designer.cs">
+      <DependentUpon>Wfo_HorComedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_SendSms.aspx.cs">
+      <DependentUpon>Wfo_SendSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_SendSms.aspx.designer.cs">
+      <DependentUpon>Wfo_SendSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_TicketComedor.aspx.cs">
+      <DependentUpon>Wfo_TicketComedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_TicketComedor.aspx.designer.cs">
+      <DependentUpon>Wfo_TicketComedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_VerificaPersonal.aspx.cs">
+      <DependentUpon>Wfo_VerificaPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_VerificaPersonal.aspx.designer.cs">
+      <DependentUpon>Wfo_VerificaPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_VerificarImagen.aspx.cs">
+      <DependentUpon>Wfo_VerificarImagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_RRHH\Wfo_VerificarImagen.aspx.designer.cs">
+      <DependentUpon>Wfo_VerificarImagen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Segu\Wfo_Incidencias.aspx.cs">
+      <DependentUpon>Wfo_Incidencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Segu\Wfo_Incidencias.aspx.designer.cs">
+      <DependentUpon>Wfo_Incidencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Segu\Wfo_IngresoVehiculos.aspx.cs">
+      <DependentUpon>Wfo_IngresoVehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Segu\Wfo_IngresoVehiculos.aspx.designer.cs">
+      <DependentUpon>Wfo_IngresoVehiculos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Segu\Wfo_RecepDocs.aspx.cs">
+      <DependentUpon>Wfo_RecepDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Segu\Wfo_RecepDocs.aspx.designer.cs">
+      <DependentUpon>Wfo_RecepDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_CambiarPsw.aspx.cs">
+      <DependentUpon>Wfo_CambiarPsw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_CambiarPsw.aspx.designer.cs">
+      <DependentUpon>Wfo_CambiarPsw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_ClienteProd.aspx.cs">
+      <DependentUpon>Wfo_ClienteProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_ClienteProd.aspx.designer.cs">
+      <DependentUpon>Wfo_ClienteProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_Cuenta.aspx.cs">
+      <DependentUpon>Wfo_Cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_Cuenta.aspx.designer.cs">
+      <DependentUpon>Wfo_Cuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_SeleccionarEmpresa.aspx.cs">
+      <DependentUpon>Wfo_SeleccionarEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Sis\Wfo_SeleccionarEmpresa.aspx.designer.cs">
+      <DependentUpon>Wfo_SeleccionarEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_TI\Wfo_ConfigDispositivos.aspx.cs">
+      <DependentUpon>Wfo_ConfigDispositivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_TI\Wfo_ConfigDispositivos.aspx.designer.cs">
+      <DependentUpon>Wfo_ConfigDispositivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_TI\Wfo_FrioUPD.aspx.cs">
+      <DependentUpon>Wfo_FrioUPD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_TI\Wfo_FrioUPD.aspx.designer.cs">
+      <DependentUpon>Wfo_FrioUPD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_TI\Wfo_Inventario.aspx.cs">
+      <DependentUpon>Wfo_Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_TI\Wfo_Inventario.aspx.designer.cs">
+      <DependentUpon>Wfo_Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_KdxPaleta.aspx.cs">
+      <DependentUpon>Wfo_KdxPaleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Frio\Wfo_KdxPaleta.aspx.designer.cs">
+      <DependentUpon>Wfo_KdxPaleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Usr\Wfo_Mantenimiento.aspx.cs">
+      <DependentUpon>Wfo_Mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mod_Usr\Wfo_Mantenimiento.aspx.designer.cs">
+      <DependentUpon>Wfo_Mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerAdmi.asmx.cs">
+      <DependentUpon>SerAdmi.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerAgro.asmx.cs">
+      <DependentUpon>SerAgro.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="SerAlm.asmx.cs">
+      <DependentUpon>SerAlm.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerCal.asmx.cs">
+      <DependentUpon>SerCal.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerCali.asmx.cs">
+      <DependentUpon>SerCali.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerCertCalidad.asmx.cs">
+      <DependentUpon>SerCertCalidad.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerComex.asmx.cs">
+      <DependentUpon>SerComex.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerConta.asmx.cs">
+      <DependentUpon>SerConta.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerCPF.asmx.cs">
+      <DependentUpon>SerCPF.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerExtr.asmx.cs">
+      <DependentUpon>SerExtr.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="SerFrio.asmx.cs">
+      <DependentUpon>SerFrio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerLogi.asmx.cs">
+      <DependentUpon>SerLogi.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerMaes.asmx.cs">
+      <DependentUpon>SerMaes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerPlanilla.asmx.cs">
+      <DependentUpon>SerPlanilla.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerPres.asmx.cs">
+      <DependentUpon>SerPres.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerProd.asmx.cs">
+      <DependentUpon>SerProd.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerRecep.asmx.cs">
+      <DependentUpon>SerRecep.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerRepo.asmx.cs">
+      <DependentUpon>SerRepo.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerRRHH.asmx.cs">
+      <DependentUpon>SerRRHH.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerSegu.asmx.cs">
+      <DependentUpon>SerSegu.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerSis.asmx.cs">
+      <DependentUpon>SerSis.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerTareo.asmx.cs">
+      <DependentUpon>SerTareo.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerTI.asmx.cs">
+      <DependentUpon>SerTI.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SerTransf.asmx.cs">
+      <DependentUpon>SerTransf.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SER_Reg_Chofe_Placas.asmx.cs">
+      <DependentUpon>SER_Reg_Chofe_Placas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SER_Reg_Sup_Evaluador.asmx.cs">
+      <DependentUpon>SER_Reg_Sup_Evaluador.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadUtl.cs" />
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wfo.aspx.cs">
+      <DependentUpon>wfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfo.aspx.designer.cs">
+      <DependentUpon>wfo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Asmx\" />
+    <Folder Include="Img\SliderTimer\" />
+    <Folder Include="Mod_Agro\Files\Anexos\" />
+    <Folder Include="Mod_Segu\Img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="sound\.editorconfig" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SFC_BE\SFC_BE.csproj">
+      <Project>{054a6a95-3c24-4855-bf77-4138c149631d}</Project>
+      <Name>SFC_BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SFC_BL\SFC_BL.csproj">
+      <Project>{3c959ac5-d6c5-43a7-917e-dbc9fd1a8146}</Project>
+      <Name>SFC_BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mod_Repo\reports\Crt_BoletaTick.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_BoletaTick.cs</LastGenOutput>
+    </Content>
+    <Content Include="Mod_Repo\reports\Crt_PresCultivo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_PresCultivo.cs</LastGenOutput>
+    </Content>
+    <Content Include="Mod_Repo\reports\Crt_Presupuesto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_Presupuesto.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mod_Repo\reports\Crt_TicketAlimento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_TicketAlimento.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mod_Repo\reports\Crt_RendimientoPack.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_RendimientoPack.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mod_Repo\reports\Crt_FichaSC19.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_FichaSC19.cs</LastGenOutput>
+    </Content>
+    <Content Include="Mod_Repo\reports\Crt_OrdenEmbarquecmx.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_OrdenEmbarquecmx.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mod_Repo\reports\Crt_Utilidades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crt_Utilidades.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63363</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

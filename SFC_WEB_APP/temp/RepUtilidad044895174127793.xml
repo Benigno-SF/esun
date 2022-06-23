@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="get">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IDCODIGOGENERAL" type="xs:string" minOccurs="0" />
+                <xs:element name="APENOM" type="xs:string" minOccurs="0" />
+                <xs:element name="DNI" type="xs:string" minOccurs="0" />
+                <xs:element name="INGRESO" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="CESE" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="IMPORTE_REPARTIR" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PERIODO" type="xs:string" minOccurs="0" />
+                <xs:element name="DIAS_TODOS" type="xs:int" minOccurs="0" />
+                <xs:element name="DIAS_TRABAJADOR" type="xs:int" minOccurs="0" />
+                <xs:element name="REMUNERACION_TODOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="REMUNERACION_TRABAJADOR" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DISTRIBUIR_DIAS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DISTRIBUIR_REMUNERACION" type="xs:decimal" minOccurs="0" />
+                <xs:element name="OTROS_INGRESOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="RENTA" type="xs:decimal" minOccurs="0" />
+                <xs:element name="UTILIDAD" type="xs:decimal" minOccurs="0" />
+                <xs:element name="UTILIDAD_NETA" type="xs:decimal" minOccurs="0" />
+                <xs:element name="IDTIPOPERSONAL" type="xs:string" minOccurs="0" />
+                <xs:element name="INGRESO_XDIA" type="xs:decimal" minOccurs="0" />
+                <xs:element name="INGRESO_XREMUNE" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO4" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO5" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DESCUENTO6" type="xs:decimal" minOccurs="0" />
+                <xs:element name="GRUPO_DSC" type="xs:string" minOccurs="0" />
+                <xs:element name="CCOSTO_DSC" type="xs:string" minOccurs="0" />
+                <xs:element name="CARGO_DSC" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</NewDataSet>

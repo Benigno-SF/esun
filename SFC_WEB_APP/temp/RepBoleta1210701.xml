@@ -1,0 +1,308 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="EMPR">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nIdEmpresa" type="xs:int" minOccurs="0" />
+                <xs:element name="IDEMPRESA" type="xs:string" minOccurs="0" />
+                <xs:element name="cRuc" type="xs:string" minOccurs="0" />
+                <xs:element name="cRazonSocialEmpr" type="xs:string" minOccurs="0" />
+                <xs:element name="cDirecEmpr" type="xs:string" minOccurs="0" />
+                <xs:element name="IDPLANILLA" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="CABE">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IDEMPRESA" type="xs:string" minOccurs="0" />
+                <xs:element name="IDCODIGOGENERAL" type="xs:string" minOccurs="0" />
+                <xs:element name="CERRADO" type="xs:string" minOccurs="0" />
+                <xs:element name="PERIODO" type="xs:string" minOccurs="0" />
+                <xs:element name="SEMANA" type="xs:string" minOccurs="0" />
+                <xs:element name="FECHA_INI" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="FECHA_FIN" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="NRODOCUMENTO" type="xs:string" minOccurs="0" />
+                <xs:element name="APE_NOMB" type="xs:string" minOccurs="0" />
+                <xs:element name="CODIGO_CONTROL" type="xs:string" minOccurs="0" />
+                <xs:element name="IDCARGO" type="xs:string" minOccurs="0" />
+                <xs:element name="CARGO" type="xs:string" minOccurs="0" />
+                <xs:element name="FECHA_INGRESO" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="IDTIPOTRABAJADOR" type="xs:string" minOccurs="0" />
+                <xs:element name="TIPOTRABAJADOR" type="xs:string" minOccurs="0" />
+                <xs:element name="IDAFP" type="xs:string" minOccurs="0" />
+                <xs:element name="AFP" type="xs:string" minOccurs="0" />
+                <xs:element name="AUTOGENERADOAFP" type="xs:string" minOccurs="0" />
+                <xs:element name="CUENTA_BANCO" type="xs:string" minOccurs="0" />
+                <xs:element name="IDBANCO" type="xs:string" minOccurs="0" />
+                <xs:element name="BANCO" type="xs:string" minOccurs="0" />
+                <xs:element name="AUTOGENERADOIPSS" type="xs:string" minOccurs="0" />
+                <xs:element name="BASICO" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DIRECCION" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="NUEV">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Desc_J" type="xs:string" minOccurs="0" />
+                <xs:element name="valor_J" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Desc_D" type="xs:string" minOccurs="0" />
+                <xs:element name="valor_D" type="xs:decimal" minOccurs="0" />
+                <xs:element name="norden" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DETA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IDEMPRESA" type="xs:string" minOccurs="0" />
+                <xs:element name="IDCODIGOGENERAL" type="xs:string" minOccurs="0" />
+                <xs:element name="IDCONCEPTO" type="xs:string" minOccurs="0" />
+                <xs:element name="DESCRIPCION" type="xs:string" minOccurs="0" />
+                <xs:element name="DESCR_CORTA" type="xs:string" minOccurs="0" />
+                <xs:element name="CALCULO" type="xs:decimal" minOccurs="0" />
+                <xs:element name="IDTIPOCONCEPTO" type="xs:string" minOccurs="0" />
+                <xs:element name="TIPOCONCEPTO" type="xs:string" minOccurs="0" />
+                <xs:element name="ORDEN" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TIEM">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="HORAS_NORMALES" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_EXTRAS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_EXTRAS2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_DOBLES" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_NOCTURNAS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_EXTNOCTU" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_EXTNOCTU2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_DOBNOCTU" type="xs:decimal" minOccurs="0" />
+                <xs:element name="HORAS_DOBEXTNOCTU" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DIAS_TRABAJADOS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DIAS_RENDIMIENTO" type="xs:decimal" minOccurs="0" />
+                <xs:element name="FALTAS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Neto" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="HORA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IDEMPRESA" type="xs:string" minOccurs="0" />
+                <xs:element name="IDCODIGOGENERAL" type="xs:string" minOccurs="0" />
+                <xs:element name="DIA" type="xs:string" minOccurs="0" />
+                <xs:element name="FECHA" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="HORAS" type="xs:decimal" minOccurs="0" />
+                <xs:element name="RENDIMIENTO" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="EVAL">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="bReImpr" type="xs:boolean" minOccurs="0" />
+                <xs:element name="dFecha" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <EMPR>
+    <nIdEmpresa>1</nIdEmpresa>
+    <IDEMPRESA>001</IDEMPRESA>
+    <cRuc>20494586810</cRuc>
+    <cRazonSocialEmpr>SUN FRUITS EXPORTS S.A.</cRazonSocialEmpr>
+    <cDirecEmpr>CAL. CONTRALMIRANTE MONTERO NRO. 411 - INT. 404 - URB CAMPO DE POLO - MAGDALENA DEL MAR - LIMA</cDirecEmpr>
+    <IDPLANILLA>ERG</IDPLANILLA>
+  </EMPR>
+  <CABE>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <CERRADO>C</CERRADO>
+    <PERIODO>202111</PERIODO>
+    <SEMANA xml:space="preserve">  </SEMANA>
+    <FECHA_INI>2021-11-01T00:00:00-05:00</FECHA_INI>
+    <FECHA_FIN>2021-11-30T00:00:00-05:00</FECHA_FIN>
+    <NRODOCUMENTO>70363530</NRODOCUMENTO>
+    <APE_NOMB>GONZALES CASTILLA, ANGEL ERNESTO</APE_NOMB>
+    <CODIGO_CONTROL>0007865799</CODIGO_CONTROL>
+    <IDCARGO>036</IDCARGO>
+    <CARGO>ANALISTA PROGRAMADOR TI</CARGO>
+    <FECHA_INGRESO>2021-09-09T00:00:00-05:00</FECHA_INGRESO>
+    <IDTIPOTRABAJADOR>21</IDTIPOTRABAJADOR>
+    <TIPOTRABAJADOR>EMPLEADO</TIPOTRABAJADOR>
+    <AUTOGENERADOAFP />
+    <CUENTA_BANCO>315-00572548-0-28</CUENTA_BANCO>
+    <IDBANCO>BCP </IDBANCO>
+    <BANCO>BANCO DE CREDITO DEL PERU</BANCO>
+    <AUTOGENERADOIPSS />
+    <BASICO>2300.00</BASICO>
+  </CABE>
+  <NUEV>
+    <Desc_J>TOTAL					: </Desc_J>
+    <valor_J>2300.00</valor_J>
+    <Desc_D>TOTAL D.S.O.	:</Desc_D>
+    <valor_D>0.00</valor_D>
+    <norden>4</norden>
+  </NUEV>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>AE0001</IDCONCEPTO>
+    <DESCRIPCION>Pago de SUN FRUITS EXPORTS S.A. a ESSALUD</DESCRIPCION>
+    <DESCR_CORTA>ESSALUD        </DESCR_CORTA>
+    <CALCULO>207.00</CALCULO>
+    <IDTIPOCONCEPTO>AE</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>APORTES DEL EMPLEADOR</TIPOCONCEPTO>
+    <ORDEN>3</ORDEN>
+  </DETA>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>AE0004</IDCONCEPTO>
+    <DESCRIPCION>Pago de SUN FRUITS EXPORTS S.A. a SEGURO VIDA LEY (D.L. 688)</DESCRIPCION>
+    <DESCR_CORTA>SEG. VIDA LEY</DESCR_CORTA>
+    <CALCULO>9.89</CALCULO>
+    <IDTIPOCONCEPTO>AE</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>APORTES DEL EMPLEADOR</TIPOCONCEPTO>
+    <ORDEN>3</ORDEN>
+  </DETA>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>DE0005</IDCONCEPTO>
+    <DESCRIPCION>ADELANTO DE QUINCENA                                                            </DESCRIPCION>
+    <DESCR_CORTA>ADELANTO QUINC </DESCR_CORTA>
+    <CALCULO>1150.00</CALCULO>
+    <IDTIPOCONCEPTO>DE</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>DESCUENTOS</TIPOCONCEPTO>
+    <ORDEN>2</ORDEN>
+  </DETA>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>DE0007</IDCONCEPTO>
+    <DESCRIPCION>ONP                                                                             </DESCRIPCION>
+    <DESCR_CORTA>O N P          </DESCR_CORTA>
+    <CALCULO>299.00</CALCULO>
+    <IDTIPOCONCEPTO>DE</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>DESCUENTOS</TIPOCONCEPTO>
+    <ORDEN>2</ORDEN>
+  </DETA>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>DE0025</IDCONCEPTO>
+    <DESCRIPCION>ADELANTO ALIMENTACION CONDICION DE TRABAJO</DESCRIPCION>
+    <DESCR_CORTA>ADEL.ALIMENTAC.</DESCR_CORTA>
+    <CALCULO>157.50</CALCULO>
+    <IDTIPOCONCEPTO>DE</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>DESCUENTOS</TIPOCONCEPTO>
+    <ORDEN>2</ORDEN>
+  </DETA>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>IN0001</IDCONCEPTO>
+    <DESCRIPCION>BASICO                                                                          </DESCRIPCION>
+    <DESCR_CORTA>BASICO         </DESCR_CORTA>
+    <CALCULO>2300.00</CALCULO>
+    <IDTIPOCONCEPTO>IN</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>INGRESOS</TIPOCONCEPTO>
+    <ORDEN>1</ORDEN>
+  </DETA>
+  <DETA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <IDCONCEPTO>IN0058</IDCONCEPTO>
+    <DESCRIPCION>ALIMENTACION CONDICION DE TRABAJO</DESCRIPCION>
+    <DESCR_CORTA>ALIMENTACION</DESCR_CORTA>
+    <CALCULO>157.50</CALCULO>
+    <IDTIPOCONCEPTO>IN</IDTIPOCONCEPTO>
+    <TIPOCONCEPTO>INGRESOS</TIPOCONCEPTO>
+    <ORDEN>7</ORDEN>
+  </DETA>
+  <TIEM>
+    <HORAS_NORMALES>208.00</HORAS_NORMALES>
+    <HORAS_EXTRAS>0.00</HORAS_EXTRAS>
+    <HORAS_EXTRAS2>0.00</HORAS_EXTRAS2>
+    <HORAS_DOBLES>0.00</HORAS_DOBLES>
+    <HORAS_NOCTURNAS>0.00</HORAS_NOCTURNAS>
+    <HORAS_EXTNOCTU>0.00</HORAS_EXTNOCTU>
+    <HORAS_EXTNOCTU2>0.00</HORAS_EXTNOCTU2>
+    <HORAS_DOBNOCTU>0.00</HORAS_DOBNOCTU>
+    <HORAS_DOBEXTNOCTU>0.00</HORAS_DOBEXTNOCTU>
+    <DIAS_TRABAJADOS>26.00</DIAS_TRABAJADOS>
+    <DIAS_RENDIMIENTO>0.00</DIAS_RENDIMIENTO>
+    <FALTAS>0.00</FALTAS>
+    <Neto>851.00</Neto>
+  </TIEM>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Lunes</DIA>
+    <FECHA>2021-11-01T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Martes</DIA>
+    <FECHA>2021-11-02T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Miércoles</DIA>
+    <FECHA>2021-11-03T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Jueves</DIA>
+    <FECHA>2021-11-04T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Viernes</DIA>
+    <FECHA>2021-11-05T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Sábado</DIA>
+    <FECHA>2021-11-06T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <HORA>
+    <IDEMPRESA>001</IDEMPRESA>
+    <IDCODIGOGENERAL>70363530</IDCODIGOGENERAL>
+    <DIA>Domingo</DIA>
+    <FECHA>2021-11-07T00:00:00-05:00</FECHA>
+    <HORAS>0.00</HORAS>
+    <RENDIMIENTO>0.00</RENDIMIENTO>
+  </HORA>
+  <EVAL>
+    <bReImpr>true</bReImpr>
+    <dFecha>13/12/2021</dFecha>
+  </EVAL>
+</NewDataSet>
